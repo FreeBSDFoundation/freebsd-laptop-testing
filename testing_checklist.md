@@ -143,6 +143,8 @@
 
 - [ ] Windows VM survives suspend/resume cycles
 
+- [ ] USB network tethering of a smartphone to a laptop should work
+
 - [ ] VMs of all popular guest linux distributions survive suspend/resume cycles
 
     **Criteria**
@@ -184,6 +186,8 @@
 
 - [ ] FreeBSD should have a simple recommended process or tool to identify available WiFi networks, choose one to connect to, and provide a passphrase.
     https://github.com/FreeBSDFoundation/proj-laptop/issues/3
+
+- [ ] The user can connect their laptop to the internet through their mobile phone when travelling.
 
 - [ ] Suspending the laptop while a VM is running should not affect the VM's state upon resume.
     https://github.com/FreeBSDFoundation/proj-laptop/issues/9
