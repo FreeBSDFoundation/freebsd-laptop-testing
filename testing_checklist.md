@@ -199,6 +199,8 @@
 - [ ] The user can share their screen on all popular browsers and other applications that request the webcam.
     https://github.com/FreeBSDFoundation/proj-laptop/issues/14
 
+- [ ] The user can stay in a one hour long meeting straight on all popular meeting software, to make sure there are no interruptions.
+
 - [ ] Sound should seamlessly switch to headphones when plugged in, and back to speakers when plugged out.
     https://github.com/FreeBSDFoundation/proj-laptop/issues/15
 
