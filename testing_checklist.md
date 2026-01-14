@@ -63,6 +63,12 @@
     **Criteria**
     * No connection issues
 
+- [ ] S2idle (Modern Standby) capabilties are working correctly
+ 
+    **Instructions**
+    1. Run `sysctl hw.acpi.supported_sleep_state` and verify `s2idle` support is listed
+    2. Set a press of the power button to suspend to idle, e.g.: `sysctl hw.acpi.power_button_state=s2idle`
+
 - [ ] OpenGL and Vulkan test utilities are accelerated
 
     **Instructions**
