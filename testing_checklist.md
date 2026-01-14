@@ -46,7 +46,7 @@
 
     **Criteria**
     * No visual errors observed
-    * No errors observe/d in dmesg or /var/log/messages
+    * No errors observed in dmesg or /var/log/messages
 
 - [ ] TODO PLACEHOLDER FOR HIBERNATION TESTS
 
