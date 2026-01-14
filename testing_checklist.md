@@ -46,7 +46,7 @@
 
     **Criteria**
     * No visual errors observed
-    * No errors observed in dmesg or /var/log/messages
+    * No errors observe/d in dmesg or /var/log/messages
 
 - [ ] TODO PLACEHOLDER FOR HIBERNATION TESTS
 
@@ -68,6 +68,11 @@
     **Instructions**
     1. Run `sysctl hw.acpi.supported_sleep_state` and verify `s2idle` support is listed
     2. Set a press of the power button to suspend to idle, e.g.: `sysctl hw.acpi.power_button_state=s2idle`
+
+    **Criteria**
+    1. The battery should not drain more than ~2% per hour. High drain indicates improper function of s2idle
+    2. The laptop should not feel too hot to the touch when awakened from s2idle sleep
+    3. Verify in `powertop` that the s2idle sleep state is being activated
 
 - [ ] OpenGL and Vulkan test utilities are accelerated
 
