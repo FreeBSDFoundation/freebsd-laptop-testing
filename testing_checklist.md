@@ -63,7 +63,7 @@
     **Criteria**
     * No connection issues
 
-- [ ] S2idle (Modern Standby) capabilties are working correctly
+- [ ] S2idle (Suspend-To-Idle) capabilities are working correctly
  
     **Instructions**
     1. Run `sysctl hw.acpi.supported_sleep_state` and verify `s2idle` support is listed
