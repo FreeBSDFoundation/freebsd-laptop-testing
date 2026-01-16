@@ -2,7 +2,7 @@
 
 The Laptop and Support Usability project is committed to ensure that FreeBSD works on [these supported configurations](https://github.com/FreeBSDFoundation/proj-laptop/tree/main/supported). However, we want FreeBSD to run smoothly on the systems that you use! We would appreciate any help to test and validate your desired configurations as well.
 
-This guide provides regarding how to test your laptop or desktop with FreeBSD, collecting hardware data using hw-probe, and steps to convert your hw-probe dump into a user-friendly list of devices that are working, which will improve our database of supported platforms.
+This guide provides information on how to test your laptop or desktop with FreeBSD, collecting hardware data using hw-probe, and some steps to convert your hw-probe dump into a user-friendly list of devices that are working, which will improve our database of supported platforms.
 
 ## Getting started
 
