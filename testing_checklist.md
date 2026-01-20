@@ -192,6 +192,8 @@
 - [ ] Suspending the laptop while a VM is running should not affect the VM's state upon resume.
     https://github.com/FreeBSDFoundation/proj-laptop/issues/9
 
+- [ ] The user can change the keyboard backlight and display backlight to view content at a comfortable brightness and view the keyboard in any condition. 
+ 
 - [ ] Graphical applications (such as games and media content creation tools) should run smoothly on the laptop at the screen refresh rate or higher.
     https://github.com/FreeBSDFoundation/proj-laptop/issues/11
     https://github.com/FreeBSDFoundation/proj-laptop/issues/13
