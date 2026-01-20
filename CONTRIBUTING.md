@@ -6,11 +6,13 @@ This guide provides information on how to test your laptop or desktop with FreeB
 
 ## Getting started
 
-You will need `hw-probe`, which is in the FreeBSD ports tree as [sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/). Once installed, run `hw-probe -all` to create a raw dump of your system's devices. This dump will be converted into a human-readable format using TODO, which provides a more user-friendly insight into which devices are currently supported on FreeBSD on your system.
+You will need `hw-probe`, which is in the FreeBSD ports tree as [sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/). Once installed, run `hw-probe -all` to create a raw dump of your system's devices. This dump will be converted into a human-readable format using [hwify](https://github.com/shreeney/hwify), which provides a more user-friendly insight into which devices are currently supported on FreeBSD on your system.
 
 ## What contributions we need
 
-TODO
+We are aiming to create a workflow system where users can submit their hw-probe files through Github, and a CI pipeline can run hwify on the submitted file, which then shows the user the summary of their dump for their system devices. 
+
+The main thing we need are hardware dumps from a diverse pool of laptop hardware, since we can examine which system devices are in most need of support. Once our CI pipeline is finished, the main thing we need as of now are dumps to get a high-level overview of what's current being used as well as what needs work.  
 
 ### Issues
 
