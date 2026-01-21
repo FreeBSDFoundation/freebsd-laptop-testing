@@ -35,6 +35,8 @@
     * Must not bypass authentication
     * Must not add any extra text character input to any form fields
 
+- [ ] Test legacy S3 sleep state on older laptops and desktops
+
 - [ ] Laptop-specific hardware indicator (e.g. LED blinking, etc.) functions during suspend/resume
 
 - [ ] Login with user credentials
