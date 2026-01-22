@@ -14,6 +14,9 @@ This guide provides information on how to test your laptop or desktop with FreeB
  
 ## What contributions we need
 
+Any recent laptop hardware would be very helpful for our testing project. The more platforms we can gather test data for, the better we can make the FreeBSD experience on laptops be.  
+
+Place your PR details under the pull requests section of this file to log your hardware for others to see.
 
 ### Issues
 
