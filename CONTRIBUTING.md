@@ -2,21 +2,19 @@
 
 The Laptop and Support Usability project is committed to ensure that FreeBSD works on [these supported configurations](https://github.com/FreeBSDFoundation/proj-laptop/tree/main/supported). However, we want FreeBSD to run smoothly on the systems that you use! We would appreciate any help to test and validate your desired configurations as well.
 
-This guide provides information on how to test your laptop or desktop with FreeBSD. We are gathering hardware data using hw-probe into a user-friendly list of devices that are working, which will improve our database of supported platforms.
+This guide provides information on how to test your laptop or desktop with FreeBSD. This repository contains a Makefile which contributors will run to generate hardware data, and after a pull request, will be placed in a directory along with every tested device so far.
 
 ## Getting started
 
-1. You will need `hw-probe`, which can be downloaded from `pkg` or found in the ports tree at [/sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/).
+1. You will need `hw-probe` and `python3` which can be downloaded from `pkg` or found in the ports tree at [/sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/) and [/lang/python](https://www.freshports.org/lang/python) respectively. 
 
-2. Run `hw-probe -all` as root. The tool will tell you where it stored its raw data, the `devices` file inside the hw.info folder is what we are interested in.
+2. Clone the repository with git, and type `make`. Supply your root password when prompted and a new file will be generated inside the `test_results` directory.
 
-3. Create a PR with your devices file and a file will be generated that contains a more readable version of your hardware status.
+3. Create a new pull request with the file and we will merge it into main. 
  
 ## What contributions we need
 
-Any recent laptop hardware would be very helpful for our testing project. The more platforms we can gather test data for, the better we can make the FreeBSD experience on laptops be.  
-
-Place your PR details under the pull requests section of this file to log your hardware for others to see.
+Any recent laptop hardware would be very helpful for our testing project. The more platforms we can gather test data for, the better we can make the FreeBSD experience on laptops be. Since Wi-Fi is a core focus of the FreeBSD Laptop Project, a wide variety of network card vendors would be very helpful for developers.  
 
 ### Issues
 
