@@ -10,7 +10,9 @@ This guide provides information on how to test your laptop or desktop with FreeB
 
 2. Clone the repository with git, and type `make`. Supply your root password when prompted and a new file will be generated inside the `test_results` directory.
 
-3. Create a new pull request with the file and we will merge it into main. 
+3. Enter the `test_results` directory and view the file. The file will contain sections pertaining to devices on your system that are working and not working, along with more verbose output at the bottom.
+
+3. Create a new pull request with the file present and we will merge it into the main branch. 
  
 ## What contributions we need
 
