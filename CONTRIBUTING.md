@@ -6,7 +6,7 @@ This guide provides information on how to test your laptop or desktop with FreeB
 
 ## Getting started
 
-1. You will need `hw-probe` and `python3` which can be downloaded from `pkg` or found in the ports tree at [/sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/) and [/lang/python](https://www.freshports.org/lang/python) respectively. 
+1. You will need `hw-probe` and `python3` which can be downloaded from `pkg` or found in the ports tree at [sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/) and [lang/python](https://www.freshports.org/lang/python) respectively. 
 
 2. Clone the repository with git, and type `make`. Supply your root password when prompted and a new file will be generated inside the `test_results` directory.
 
