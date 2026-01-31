@@ -72,7 +72,7 @@
     **Criteria**
     1. The battery should not drain more than ~2% per hour. High drain indicates improper function of s2idle
     2. The laptop should not feel too hot to the touch when awakened from s2idle sleep
-    3. Verify in [Intel's S0ix selftest tool](https://github.com/intel/S0ixSelftestTool) that the s2idle sleep state is being activated
+    3. Use `sysctl dev.cpu | grep cx_usage` to verify that deeper C-states past C1 are being triggered when the computer is put to sleep. 
 
 - [ ] OpenGL and Vulkan test utilities are accelerated
 
