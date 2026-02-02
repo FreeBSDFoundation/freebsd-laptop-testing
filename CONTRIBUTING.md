@@ -2,17 +2,13 @@
 
 The Laptop and Support Usability project is committed to ensure that FreeBSD works on [these supported configurations](https://github.com/FreeBSDFoundation/proj-laptop/tree/main/supported). However, we want FreeBSD to run smoothly on the systems that you use! We would appreciate any help to test and validate your desired configurations as well.
 
-This guide provides information on how to test your laptop or desktop with FreeBSD. This repository contains a Makefile which contributors will run to generate hardware data, and after a pull request, will be placed in a directory along with every tested device so far.
-
 ## Getting started
 
-1. You will need `hw-probe` and `python3` which can be downloaded from `pkg` or found in the ports tree at [sysutils/hw-probe](https://www.freshports.org/sysutils/hw-probe/) and [lang/python](https://www.freshports.org/lang/python) respectively. 
+1. First, `git clone` this repo. then run `pkg install python hw-probe` and type `make`. Supply your root password when prompted and a new file will be generated inside the `test_results` directory.
 
-2. Clone the repository with git, and type `make`. Supply your root password when prompted and a new file will be generated inside the `test_results` directory.
+2. Enter the `test_results` directory and view the file. The file will contain sections pertaining to devices on your system that are working and not working, along with more verbose output at the bottom.
 
-3. Enter the `test_results` directory and view the file. The file will contain sections pertaining to devices on your system that are working and not working, along with more verbose output at the bottom.
-
-3. Create a new pull request with the file present and we will merge it into the main branch. 
+3. Create a new pull request with the file attatched. 
  
 ## What contributions we need
 
