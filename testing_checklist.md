@@ -78,10 +78,11 @@
 
     **Instructions**
     1. Run glxgears and vkcube in a terminal
-    2. Run vkmark and supertuxkart with `radeontop` (AMD only) in a terminal and verify the "Graphics Pipe" is at ~80-100%
+    2. Run vkmark and supertuxkart with `radeontop` (AMD only) in a terminal 
 
     **Criteria**
-    * Both utilities must report running on the GPU at the target monitor refresh rate
+    * Both utilities must report running on the GPU at the target monitor refresh rate (vkcube and glxgears)
+    * Both benchmarks must show in `radeontop` that at least ~80-100% of the graphics pipe is being used
 
 - [ ] Hardware accelerated video works out of the box
 
