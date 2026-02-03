@@ -78,6 +78,7 @@
 
     **Instructions**
     1. Run glxgears and vkcube in a terminal
+    2. Run vkmark and supertuxkart with `radeontop` (AMD only) in a terminal and verify the "Graphics Pipe" is at ~80-100%
 
     **Criteria**
     * Both utilities must report running on the GPU at the target monitor refresh rate
