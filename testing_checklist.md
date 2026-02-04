@@ -35,6 +35,16 @@
     * Must not bypass authentication
     * Must not add any extra text character input to any form fields
 
+- [ ] Test legacy S3 sleep state on older laptops and desktops.
+
+    **Instructions**
+    1. Put computer to sleep through lid or button press.
+
+    **Criteria**
+    1. Check the power button state (blinking or strobing)
+    2. Verify battery drain does not exceed ~1% per hour. 
+    3. Use dmesg to grep ACPI interrupts to verify S3 functionality.
+
 - [ ] Laptop-specific hardware indicator (e.g. LED blinking, etc.) functions during suspend/resume
 
 - [ ] Login with user credentials
