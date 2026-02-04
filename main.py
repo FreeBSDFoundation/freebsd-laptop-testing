@@ -1,13 +1,20 @@
-import os
+import sys
+from pathlib import Path
 import re
 from datetime import datetime
 import subprocess
-import shutil
 
-hw_probe_dump = os.path.expanduser("~/hwify/hw.info/devices")
-ifconfig_path = os.path.expanduser("~/hwify/hw.info/logs/ifconfig")
-pciconf_path = os.path.expanduser("~/hwify/hw.info/logs/pciconf")
-uname_path = os.path.expanduser("~/hwify/hw.info/logs/uname")
+if len(sys.argv) >= 2:
+    tmpdir = Path(sys.argv[1])
+else:
+    tmpdir = Path.home() / "hwify" #if user wants to run the script without a temp directory
+
+base_hwinfo = tmpdir / "hw.info" #to test both in dir and in the repo's temp directory
+
+hw_probe_dump = base_hwinfo / "devices"
+ifconfig_path = base_hwinfo / "logs" / "ifconfig"
+pciconf_path = base_hwinfo / "logs" / "pciconf"
+uname_path = base_hwinfo / "logs" / "uname"
 
 input_string = "kenv | grep smbios.system.product"
 filename_final  = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") #fallback filename for time stamp in case smbios is not present on the machine
@@ -108,11 +115,6 @@ def generate_hardware_summary(ifconfig, pciconf, hw_probe, output):
         for detail in ifconfig_status:
             out.write(f"    {detail}\n")
         out.write("\n")
-        #move file into the test results dir
-        try:
-            shutil.move(filename_final, os.path.join("test_results", filename_final))
-        except Exception as e:
-            print(f"Failed to move file: {e}")
         out.write("\n")
         out.write("- CPU Info")
         out.write("\n")
