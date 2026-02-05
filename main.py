@@ -15,6 +15,8 @@ hw_probe_dump = base_hwinfo / "devices"
 ifconfig_path = base_hwinfo / "logs" / "ifconfig"
 pciconf_path = base_hwinfo / "logs" / "pciconf"
 uname_path = base_hwinfo / "logs" / "uname"
+kld_path = base_hwinfo / "logs" / "kldstat"
+cpu_path = base_hwinfo / "logs" / "lscpu"
 
 input_string = "kenv | grep smbios.system.product"
 filename_final  = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") #fallback filename for time stamp in case smbios is not present on the machine
@@ -149,12 +151,14 @@ def get_uname_details():
     return content
 
 def get_kldstat():
-    kldstat = subprocess.run(["kldstat"], capture_output=True, text=True)
-    return kldstat.stdout
+    kld_file = open(kld_path, "r")
+    content = kld_file.read()
+    return content
 
 def get_cpuinfo():
-    cpu = subprocess.run(["lscpu"], capture_output=True, text=True)
-    return cpu.stdout
+    cpu_file = open(cpu_path, "r")
+    content = cpu_file.read()
+    return content
 
 def get_ifconfig_details(input_file):
 
