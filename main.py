@@ -23,7 +23,7 @@ filename_final  = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") #fallback filenam
 result = subprocess.run(input_string, capture_output=True, text=True, shell=True)
 output_string = result.stdout
 filename = re.search('"([^"]*)"', output_string)
-
+#filename is the make of the computer
 if filename:
     filename = filename.group(1)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -83,6 +83,9 @@ def generate_hardware_summary(ifconfig, pciconf, hw_probe, output):
         out.write("=== FreeBSD Hardware Status Info ===\n\n")
         out.write("Running: ")
         out.write(get_uname_details())
+        out.write("\n")
+        out.write("Hardware: ")
+        out.write(filename)
         out.write("\n")
         for label, (pci_key, probe_key) in categories.items():
 
