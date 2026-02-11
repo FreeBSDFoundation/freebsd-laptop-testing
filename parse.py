@@ -4,11 +4,13 @@ from html import escape
 
 COLUMNS = ["Graphics", "Networking", "Audio", "Storage", "USB Ports", "Bluetooth"]
 
+
 def parse_file(path):
     with open(path) as f:
         lines = f.readlines()
 
     model = None
+    ranking = None  # Added to track ranking
     data = {c: [] for c in COLUMNS}
 
     current_section = None
@@ -19,6 +21,11 @@ def parse_file(path):
 
         if line.startswith("Hardware:"):
             model = line.split("Hardware:", 1)[1].strip()
+            continue
+
+        # Logic to grab the Ranking value
+        if line.startswith("Ranking:"):
+            ranking = line.split("Ranking:", 1)[1].strip()
             continue
 
         m = re.match(r"-\s+(.+)", line)
@@ -47,20 +54,23 @@ def parse_file(path):
             data[current_section].append(f"{device} ({current_status})")
             continue
 
-    return model, data
+    return model, ranking, data  # Return ranking
 
-def emit_html(model, data):
-    print(f"<tr><td>{escape(model)}</td>", end="")
+
+def emit_html(model, ranking, data):
+    # Combine model and ranking in the first cell
+    display_model = f"{model} (Score: {ranking})" if ranking else model
+    print(f"<tr><td>{escape(display_model)}</td>", end="")
+
     for c in COLUMNS:
         cell = "<br>".join(escape(x) for x in data[c]) or "&nbsp;"
         print(f"<td>{cell}</td>", end="")
     print("</tr>")
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("usage: python hw_to_html.py <file>")
         sys.exit(1)
 
-    model, data = parse_file(sys.argv[1])
-    emit_html(model, data)
+    model, ranking, data = parse_file(sys.argv[1])
+    emit_html(model, ranking, data)
