@@ -11,7 +11,6 @@ echo "Temporary directory: $TMPDIR"
 echo "Checking for required programs..."
 command -v python >/dev/null 2>&1 || { echo "Error: python3 not found."; exit 1; }
 command -v hw-probe >/dev/null 2>&1 || { echo "Error: hw-probe not found."; exit 1; }
-command -v kenv >/dev/null 2>&1 || { echo "Error: kenv not found."; exit 1; }
 echo "All required programs are available."
 
 echo "Running hardware probe..."
@@ -27,9 +26,9 @@ echo "Running script..."
 cd "$TMPDIR"
 python "$REPO_DIR/main.py" "$TMPDIR"
 
-MAKER=$(kenv | grep '^smbios.system.maker=' | cut -d'=' -f2 | tr -d '"' | tr '[:upper:]' '[:lower:]')
+MAKER=$(kenv | grep '^smbios.system.product=' | cut -d'=' -f2 | tr -d '"' | tr '[:upper:]' '[:lower:]' | sed 's/[^[:alnum:]]/_/g')
 if [ -z "$MAKER" ]; then
-    echo "Error: Could not determine system maker."
+    echo "Error: Could not determine system product."
     exit 1
 fi
 
