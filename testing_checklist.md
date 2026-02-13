@@ -43,7 +43,7 @@
     **Criteria**
     1. Check the power button state (blinking or strobing)
     2. Verify battery drain does not exceed ~1% per hour. 
-    3. Use dmesg to grep ACPI interrupts to verify S3 functionality.
+    3. Use `sysctl dev.cpu |grep cx` to grep ACPI interrupts to verify S3 functionality.
 
 - [ ] Laptop-specific hardware indicator (e.g. LED blinking, etc.) functions during suspend/resume
 
