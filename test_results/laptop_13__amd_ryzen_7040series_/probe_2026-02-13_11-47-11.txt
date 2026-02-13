@@ -1,8 +1,10 @@
 === FreeBSD Hardware Status Info ===
 
 Running: FreeBSD 16.0-CURRENT #5 main-cd8d44173adc: Tue Feb  3 09:08:27 EST 2026     XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
 Hardware: Laptop 13 (AMD Ryzen 7040Series)
+Ranking: 25/30
+------------------------------------
+
 - Graphics
   Device 1 Status: WORKS
     vgapci0@pci0:193:0:0:	class=0x030000 rev=0xc4 hdr=0x00 vendor=0x1002 device=0x15bf subvendor=0xf111 subdevice=0x0006
@@ -90,54 +92,48 @@ Hardware: Laptop 13 (AMD Ryzen 7040Series)
 
 === FreeBSD Detailed Status Info ==
 
-Kldstat output:Id Refs Address                Size Name
- 1  156 0xffffffff80200000  25943d0 kernel
- 2    1 0xffffffff82796000    1f648 geom_eli.ko
- 3    1 0xffffffff827b6000   788828 zfs.ko
- 4    1 0xffffffff84e00000   7e9d88 amdgpu.ko
- 5    2 0xffffffff84d28000    9718d drm.ko
- 6    1 0xffffffff84dc0000     22b8 iic.ko
- 7    2 0xffffffff84dc3000     4120 linuxkpi_video.ko
- 8    3 0xffffffff84dc8000     7368 dmabuf.ko
- 9    3 0xffffffff84dd0000     3378 lindebugfs.ko
-10    1 0xffffffff84dd4000     c358 ttm.ko
-11    1 0xffffffff84de1000     5710 cuse.ko
-12    1 0xffffffff84de7000     3390 acpi_wmi.ko
-13    1 0xffffffff855ea000    cc510 if_iwlwifi.ko
-14    1 0xffffffff856b7000    181b0 if_iwx.ko
-15    1 0xffffffff84deb000     6230 ig4.ko
-16    1 0xffffffff84df2000     3220 intpm.ko
-17    1 0xffffffff84df6000     2178 smbus.ko
-18    1 0xffffffff856d0000    310c0 linux.ko
-19    2 0xffffffff84df9000     6d98 mqueuefs.ko
-20    4 0xffffffff85702000     ccb0 linux_common.ko
-21    1 0xffffffff8570f000    2e1a0 linux64.ko
-22    1 0xffffffff8573e000     2278 pty.ko
-23    1 0xffffffff85741000     3570 fdescfs.ko
-24    1 0xffffffff85745000     73c0 linprocfs.ko
-25    1 0xffffffff8574d000     5414 linsysfs.ko
-26    1 0xffffffff85753000     58a0 ng_ubt.ko
-27    4 0xffffffff85759000     bbb8 netgraph.ko
-28    3 0xffffffff85765000     a330 ng_hci.ko
-29    2 0xffffffff85770000     2670 ng_bluetooth.ko
-30    1 0xffffffff85773000     3218 iichid.ko
-31    1 0xffffffff85777000     21e8 hcons.ko
-32    2 0xffffffff8577a000     40a8 hidmap.ko
-33    1 0xffffffff8577f000     21e8 hms.ko
-34    1 0xffffffff85782000     3355 hmt.ko
-35    1 0xffffffff85786000     22cc hconf.ko
-36    1 0xffffffff85800000   344758 vmm.ko
-37    1 0xffffffff85789000     21dc nmdm.ko
-38    1 0xffffffff8578c000     9950 if_bridge.ko
-39    1 0xffffffff85796000     6120 bridgestp.ko
-40    1 0xffffffff8579d000     2af0 mac_ntpd.ko
-41    1 0xffffffff857a0000     2630 nlsysevent.ko
-
+Currently loaded kernel modules:
+zfs.ko
+geom_eli.ko
+amdgpu.ko
+drm.ko
+iic.ko
+linuxkpi_video.ko
+dmabuf.ko
+lindebugfs.ko
+ttm.ko
+cuse.ko
+acpi_wmi.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+intpm.ko
+smbus.ko
+linux.ko
+mqueuefs.ko
+linux_common.ko
+linux64.ko
+pty.ko
+fdescfs.ko
+linprocfs.ko
+linsysfs.ko
+ng_ubt.ko
+netgraph.ko
+ng_hci.ko
+ng_bluetooth.ko
+iichid.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hconf.ko
+vmm.ko
+nmdm.ko
+if_bridge.ko
+bridgestp.ko
+mac_ntpd.ko
+nlsysevent.ko
 ====================================
-ifconfig detailed output: - Active Connection Details: 
-    ssid ... channel 11 (2462 MHz 11g ht/20) bssid CB6345AFA454E37358B24DB66483A382
-    media: IEEE 802.11 Wireless Ethernet MCS mode 11ng
-
 
 - CPU Info
 Architecture:            amd64
