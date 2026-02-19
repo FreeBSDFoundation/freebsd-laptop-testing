@@ -23,7 +23,7 @@ def get_rows():
             continue
 
     data_list.sort(key=lambda x: x['score'], reverse=True)
-    for item in data_list[:5]: #Slice off last 5 items for top score
+    for item in data_list[:5]: #Slice off last 5 items for top score:wq
         print(f"<tr><td>{escape(item['name'])}</td><td>{item['score']}</td></tr>")
 
 
@@ -60,8 +60,10 @@ def parse_file(path):
 
 
 def emit_html(model, ranking, data):
-    display_model = f"{model}" if ranking else model
-    print(f"<tr><td>{escape(display_model)}</td>", end="")
+    print(f"<tr><td>{escape(model)}</td>", end="")
+
+    score_display = ranking if ranking is not None else "&nbsp;"
+    print(f"<td>{score_display}</td>", end="")
 
     for c in COLUMNS:
         items = data[c]
@@ -82,5 +84,5 @@ if __name__ == "__main__":
         model, ranking, data = parse_file(sys.argv[1])
         emit_html(model, ranking, data)
     else:
-        print("Usage: python parse.py --rank  or  python parse.py <filename>")
+        print("Usage: python parse.py --rank  or  python script.py <filename>")
         sys.exit(1)
