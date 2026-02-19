@@ -1,76 +1,86 @@
 import sys
 import re
+import glob
 from html import escape
 
 COLUMNS = ["Graphics", "Networking", "Audio", "Storage", "USB Ports", "Bluetooth"]
+
+
+def get_rows():
+    data_list = []
+    for filepath in glob.glob("**/*.txt", recursive=True):
+        try:
+            with open(filepath, 'r') as f:
+                content = f.read()
+                hw_match = re.search(r"Hardware:\s*(.*)", content)
+                score_match = re.search(r"Ranking:\s*(\d+)/", content)
+                if hw_match and score_match:
+                    data_list.append({
+                        "name": hw_match.group(1).strip(),
+                        "score": int(score_match.group(1))
+                    })
+        except Exception:
+            continue
+
+    data_list.sort(key=lambda x: x['score'], reverse=True)
+    for item in data_list[:5]: #Slice off last 5 items for top score
+        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score']}</td></tr>")
 
 
 def parse_file(path):
     with open(path) as f:
         lines = f.readlines()
 
-    model = None
-    ranking = None  # Added to track ranking
+    model, ranking = None, None
     data = {c: [] for c in COLUMNS}
-
     current_section = None
-    current_status = None
 
     for line in lines:
         line = line.rstrip()
-
         if line.startswith("Hardware:"):
             model = line.split("Hardware:", 1)[1].strip()
-            continue
-
-        # Logic to grab the Ranking value
-        if line.startswith("Ranking:"):
+        elif line.startswith("Ranking:"):
             ranking = line.split("Ranking:", 1)[1].strip()
-            continue
 
         m = re.match(r"-\s+(.+)", line)
         if m:
             section = m.group(1)
-            if section in data:
-                current_section = section
-            else:
-                current_section = None
-            current_status = None
-            continue
-
-        m = re.match(r"\s*Device \d+ Status:\s+(\w+)", line)
-        if m and current_section:
-            current_status = m.group(1)
+            current_section = section if section in data else None
             continue
 
         m = re.match(r"\s*Status:\s+(.+)", line)
         if m and current_section:
             data[current_section].append(m.group(1))
-            continue
 
         m = re.match(r"\s*device\s+=\s+'(.+)'", line)
-        if m and current_section and current_status:
-            device = m.group(1)
-            data[current_section].append(f"{device} ({current_status})")
-            continue
+        if m and current_section:
+            data[current_section].append(m.group(1))
 
-    return model, ranking, data  # Return ranking
+    return model, ranking, data
 
 
 def emit_html(model, ranking, data):
-    # Combine model and ranking in the first cell
-    display_model = f"{model} (Score: {ranking})" if ranking else model
+    display_model = f"{model}" if ranking else model
     print(f"<tr><td>{escape(display_model)}</td>", end="")
 
     for c in COLUMNS:
-        cell = "<br>".join(escape(x) for x in data[c]) or "&nbsp;"
+        items = data[c]
+        if not items:
+            cell = "&nbsp;"
+        else:
+            list_contents = "".join(f"<li>{escape(x)}</li>" for x in items)
+            cell = f"<ol style='margin: 0; padding-left: 1.5em;'>{list_contents}</ol>"
+
         print(f"<td>{cell}</td>", end="")
     print("</tr>")
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("usage: python hw_to_html.py <file>")
-        sys.exit(1)
 
-    model, ranking, data = parse_file(sys.argv[1])
-    emit_html(model, ranking, data)
+if __name__ == "__main__":
+    if "--rank" in sys.argv:
+        get_rows()
+    elif len(sys.argv) == 2:
+        model, ranking, data = parse_file(sys.argv[1])
+        emit_html(model, ranking, data)
+    else:
+        print("Usage: python parse.py --rank  or  python parse.py <filename>")
+        sys.exit(1)

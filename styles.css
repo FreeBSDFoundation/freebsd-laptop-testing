@@ -17,7 +17,23 @@
     font-size: 1.8rem;
     margin: 0; /* remove default h1 margin */
 }
+.blurb h3{
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.blurb p {
+    text-align: center;
+}
 
+ul {
+  display: inline-block; /* Makes the list width match the text */
+  text-align: left;      /* Keeps bullets next to the text */
+}
+.blurb {
+    text-align: center;
+}
 /* Ensure the page takes up the full height of the screen */
 html, body {
     height: 100%;
@@ -47,6 +63,17 @@ table {
     margin: 40px auto;
     border-collapse: collapse;
     font-family: sans-serif;
+}
+.laptop-ranking tr:nth-child(2){
+    color: #ffd700;
+}
+
+.laptop-ranking tr:nth-child(3){
+    color: #c0c0c0;
+}
+
+.laptop-ranking tr:nth-child(4){
+    color: #cd7f32;
 }
 
 th, td {
