@@ -1,0 +1,93 @@
+.site-header {
+    border-bottom: 4px solid #007acc; /* blue line */
+    padding: 16px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+}
+
+.logo-container img {
+    height: 80px;
+}
+
+.logo-container h1 {
+    font-size: 1.8rem;
+    margin: 0; /* remove default h1 margin */
+}
+.blurb h3{
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.blurb p {
+    text-align: center;
+}
+
+ul {
+  display: inline-block; /* Makes the list width match the text */
+  text-align: left;      /* Keeps bullets next to the text */
+}
+.blurb {
+    text-align: center;
+}
+/* Ensure the page takes up the full height of the screen */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* This grows to fill all space, pushing footer down */
+}
+
+.horizontal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+table {
+    width: 90%;
+    max-width: 2300px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+.laptop-ranking tr:nth-child(2){
+    color: #ffd700;
+}
+
+.laptop-ranking tr:nth-child(3){
+    color: #c0c0c0;
+}
+
+.laptop-ranking tr:nth-child(4){
+    color: #cd7f32;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
