@@ -22,7 +22,6 @@ jobs:
 
       - name: Stitch HTML Fragments Recursively
         run: |
-          # 1. Start with the header
           cat header.html > index.html
           python parse.py --rank >> index.html 
           cat laptophead.html >> index.html
