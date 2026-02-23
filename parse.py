@@ -23,7 +23,7 @@ def get_rows():
             continue
 
     data_list.sort(key=lambda x: x['score'], reverse=True)
-    for item in data_list[:5]: #Slice off last 5 items for top score:wq
+    for item in data_list[:5]: #Slice off last 5 items for top score
         print(f"<tr><td>{escape(item['name'])}</td><td>{item['score']}</td></tr>")
 
 
