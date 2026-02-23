@@ -103,7 +103,7 @@ def generate_hardware_summary(pciconf, hw_probe, output):
         out.write(f"Running: {get_uname_details().strip()}\n")
         out.write(f"Hardware: {filename}\n")
 
-        out.write(f"Ranking: {total_score}/30\n")
+        out.write(f"Score: {total_score}/30\n")
         out.write("-" * 36 + "\n\n")
 
         for label, (pci_blocks, probe_devices) in category_results.items():
@@ -169,8 +169,9 @@ def get_kldstat():
     with open(kld_path, "r") as kld_file:
         for line in kld_file:
             columns = line.split()
-            if columns and columns[-1].endswith(".ko"): # get only .ko extension files.
+            if columns and columns[-1].endswith(".ko"):
                 module_names.append(columns[-1])
+    module_names.sort()
     return "\n".join(module_names)
 
 
