@@ -1,8 +1,8 @@
 === FreeBSD Hardware Status Info ===
 
-Running: FreeBSD 16.0-CURRENT #5 main-cd8d44173adc: Tue Feb  3 09:08:27 EST 2026     XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Running: FreeBSD 16.0-CURRENT #6 main-836ac989933b: Fri Feb 20 10:46:36 EST 2026     XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Hardware: Laptop 13 (AMD Ryzen 7040Series)
-Ranking: 25/30
+Score: 25/30
 ------------------------------------
 
 - Graphics
@@ -93,46 +93,46 @@ Ranking: 25/30
 === FreeBSD Detailed Status Info ==
 
 Currently loaded kernel modules:
-zfs.ko
-geom_eli.ko
-amdgpu.ko
-drm.ko
-iic.ko
-linuxkpi_video.ko
-dmabuf.ko
-lindebugfs.ko
-ttm.ko
-cuse.ko
 acpi_wmi.ko
-if_iwlwifi.ko
-if_iwx.ko
-ig4.ko
-intpm.ko
-smbus.ko
-linux.ko
-mqueuefs.ko
-linux_common.ko
-linux64.ko
-pty.ko
+amdgpu.ko
+bridgestp.ko
+cuse.ko
+dmabuf.ko
+drm.ko
 fdescfs.ko
-linprocfs.ko
-linsysfs.ko
-ng_ubt.ko
-netgraph.ko
-ng_hci.ko
-ng_bluetooth.ko
-iichid.ko
+geom_eli.ko
+hconf.ko
 hcons.ko
 hidmap.ko
 hms.ko
 hmt.ko
-hconf.ko
-vmm.ko
-nmdm.ko
 if_bridge.ko
-bridgestp.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
 mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
 nlsysevent.ko
+nmdm.ko
+pty.ko
+smbus.ko
+ttm.ko
+vmm.ko
+zfs.ko
 ====================================
 
 - CPU Info
