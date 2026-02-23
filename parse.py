@@ -3,7 +3,7 @@ import re
 import glob
 from html import escape
 
-COLUMNS = ["Graphics", "Networking", "Audio", "Storage", "USB Ports", "Bluetooth"]
+COLUMNS = ["Graphics", "Networking", "Audio", "Storage", "USB Ports"]
 
 
 def get_rows():
@@ -13,7 +13,7 @@ def get_rows():
             with open(filepath, 'r') as f:
                 content = f.read()
                 hw_match = re.search(r"Hardware:\s*(.*)", content)
-                score_match = re.search(r"Ranking:\s*(\d+)/", content)
+                score_match = re.search(r"Score:\s*(\d+)/", content)
                 if hw_match and score_match:
                     data_list.append({
                         "name": hw_match.group(1).strip(),
@@ -61,10 +61,6 @@ def parse_file(path):
 
 def emit_html(model, ranking, data):
     print(f"<tr><td>{escape(model)}</td>", end="")
-
-    score_display = ranking if ranking is not None else "&nbsp;"
-    print(f"<td>{score_display}</td>", end="")
-
     for c in COLUMNS:
         items = data[c]
         if not items:
@@ -72,8 +68,9 @@ def emit_html(model, ranking, data):
         else:
             list_contents = "".join(f"<li>{escape(x)}</li>" for x in items)
             cell = f"<ol style='margin: 0; padding-left: 1.5em;'>{list_contents}</ol>"
-
         print(f"<td>{cell}</td>", end="")
+    score_display = ranking if ranking is not None else "&nbsp;"
+    print(f"<td>{score_display}</td>", end="")
     print("</tr>")
 
 
@@ -84,5 +81,5 @@ if __name__ == "__main__":
         model, ranking, data = parse_file(sys.argv[1])
         emit_html(model, ranking, data)
     else:
-        print("Usage: python parse.py --rank  or  python parse.py <filename>")
+        print("Usage: python parse.py --rank  or  python script.py <filename>")
         sys.exit(1)
