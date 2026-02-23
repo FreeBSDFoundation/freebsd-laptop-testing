@@ -23,7 +23,7 @@ def get_rows():
             continue
 
     data_list.sort(key=lambda x: x['score'], reverse=True)
-    for item in data_list[:5]: #Slice off last 5 items for top score
+    for item in data_list[:5]: #Slice off last 5 items for top score:wq
         print(f"<tr><td>{escape(item['name'])}</td><td>{item['score']}</td></tr>")
 
 
@@ -39,9 +39,8 @@ def parse_file(path):
         line = line.rstrip()
         if line.startswith("Hardware:"):
             model = line.split("Hardware:", 1)[1].strip()
-        elif line.startswith("Ranking:"):
-            ranking = line.split("Ranking:", 1)[1].strip()
-
+        elif line.startswith("Score:"):
+            ranking = line.split("Score:", 1)[1].strip()
         m = re.match(r"-\s+(.+)", line)
         if m:
             section = m.group(1)
