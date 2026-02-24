@@ -2,6 +2,7 @@ import sys
 import re
 import glob
 from html import escape
+import os
 
 COLUMNS = ["Graphics", "Networking", "Audio", "Storage", "USB Ports"]
 
@@ -57,9 +58,18 @@ def parse_file(path):
 
     return model, ranking, data
 
+def emit_html(model, ranking, data, path):
+    #Generate github link for user to click on
+    repo = os.getenv('REPO_CONTEXT', 'unknown/repo')
+    branch = os.getenv('BRANCH_NAME', 'main')
+    clean_path = path.lstrip("./")
+    github_link = f"https://github.com{repo}/blob/{branch}/{clean_path}"
+    print(f"<tr>", end="")
 
-def emit_html(model, ranking, data):
-    print(f"<tr><td>{escape(model)}</td>", end="")
+    #Model cell with link
+    print(f"<td><strong>{escape(model)}</strong><br>", end="")
+    print(f"<a href='{github_link}' style='font-size: 0.8em;'>View Source File</a></td>", end="")
+
     for c in COLUMNS:
         items = data[c]
         if not items:
@@ -77,8 +87,9 @@ if __name__ == "__main__":
     if "--rank" in sys.argv:
         get_rows()
     elif len(sys.argv) == 2:
-        model, ranking, data = parse_file(sys.argv[1])
-        emit_html(model, ranking, data)
+        file_path = sys.argv[1] # get the path
+        model, ranking, data = parse_file(file_path)
+        emit_html(model, ranking, data, file_path) #pass it here
     else:
         print("Usage: python parse.py --rank  or  python script.py <filename>")
         sys.exit(1)

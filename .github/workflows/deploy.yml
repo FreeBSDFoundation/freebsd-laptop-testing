@@ -27,7 +27,9 @@ jobs:
           cat laptophead.html >> index.html
           find . -type f -name "*.txt" -exec python parse.py "{}" >> index.html \;
           cat footer.html >> index.html
-
+        env:
+          REPO_CONTEXT: ${{ github.repository }}
+          BRANCH_NAME: ${{ github.ref_name }}
       - name: create html page 
         uses: actions/upload-pages-artifact@v3
         with:
