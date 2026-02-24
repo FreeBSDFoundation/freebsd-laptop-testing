@@ -64,17 +64,18 @@ table {
     border-collapse: collapse;
     font-family: sans-serif;
 }
-.laptop-ranking tr:nth-child(2){
+.laptop-ranking tbody tr:nth-child(1) td {
     color: #ffd700;
 }
 
-.laptop-ranking tr:nth-child(3){
+.laptop-ranking tbody tr:nth-child(2) td {
     color: #c0c0c0;
 }
 
-.laptop-ranking tr:nth-child(4){
+.laptop-ranking tbody tr:nth-child(3) td {
     color: #cd7f32;
 }
+
 
 /* Change this section in your CSS */
 th {
