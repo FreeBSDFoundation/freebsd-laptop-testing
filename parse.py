@@ -68,7 +68,7 @@ def emit_html(model, ranking, data, path):
 
     #Model cell with link
     print(f"<td><strong>{escape(model)}</strong><br>", end="")
-    print(f"<a href='{github_link}' style='font-size: 0.8em;'>View Source File</a></td>", end="")
+    print(f"<a href='{github_link}' style='font-size: 0.8em;'>View Probe</a></td>", end="")
 
     for c in COLUMNS:
         items = data[c]
