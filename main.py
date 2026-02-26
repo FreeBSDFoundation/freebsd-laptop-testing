@@ -94,32 +94,37 @@ def generate_hardware_summary(pciconf, hw_probe, output):
         for label, (pci_blocks, probe_devices) in category_results.items():
             out.write(f"- {label}\n")
 
-            category_score = 0
-            device_count = len(pci_blocks)
+            category_earned = 0
+
+            if label == "USB Ports":
+                any_detected = False
+                if pci_blocks:
+                    for i in range(len(pci_blocks)):
+                        status = probe_devices[i]["status"] if i < len(probe_devices) else "unknown"
+                        if status.lower() in ["works", "detected"]:
+                            any_detected = True
+                            break
+                category_earned = 2 if any_detected else 0
+                category_possible = 2
+            else:
+                category_possible = len(pci_blocks) * 2
+                if pci_blocks:
+                    for i, block in enumerate(pci_blocks):
+                        status = probe_devices[i]["status"] if i < len(probe_devices) else "unknown"
+                        if status.lower() in ["works", "detected"]:
+                            category_earned += 2
 
             if pci_blocks:
                 for i, block in enumerate(pci_blocks, 1):
-                    hw_status = (
-                        probe_devices[i - 1]["status"]
-                        if i - 1 < len(probe_devices)
-                        else "unknown"
-                    )
-
-                    device_score = 0
-                    if hw_status.lower() in ["works", "detected"]:
-                        device_score = 2
-                        category_score += 2
-
+                    hw_status = probe_devices[i - 1]["status"] if i - 1 < len(probe_devices) else "unknown"
                     out.write(f"  Device {i} Status: {hw_status.upper()}\n")
-                    out.write(f"  Device Score: {device_score}/2\n")
                     indented = "    " + block.replace("\n", "\n    ").strip()
                     out.write(f"{indented}\n")
 
-                # Print the category total score (2 points possible per device found)
-                out.write(f"\n  Category Total Score: {category_score}/{device_count * 2}\n")
+                out.write(f"\n  Category Total Score: {category_earned}/{category_possible}\n")
             else:
                 out.write("  Status: NOT DETECTED\n")
-                out.write("  Category Total Score: 0/0\n")
+                out.write(f"  Category Total Score: 0/{category_possible}\n")
 
             out.write("\n" + "-" * 20 + "\n\n")
 
