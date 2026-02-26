@@ -11,21 +11,19 @@ def get_rows():
     data_list = []
     for filepath in glob.glob("**/*.txt", recursive=True):
         try:
-            with open(filepath, 'r') as f:
-                content = f.read()
-                hw_match = re.search(r"Hardware:\s*(.*)", content)
-                score_match = re.search(r"Score:\s*(\d+)/", content)
-                if hw_match and score_match:
-                    data_list.append({
-                        "name": hw_match.group(1).strip(),
-                        "score": int(score_match.group(1))
-                    })
+            model, ranking, _, _ = parse_file(filepath)
+            if model and "/" in ranking:
+                earned = int(ranking.split('/')[0])
+                data_list.append({
+                    "name": model,
+                    "score_str": ranking,
+                    "earned": earned
+                })
         except Exception:
             continue
-
-    data_list.sort(key=lambda x: x['score'], reverse=True)
-    for item in data_list[:5]: #Slice off last 5 items for top score
-        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score']}</td></tr>")
+    data_list.sort(key=lambda x: x['earned'], reverse=True)
+    for item in data_list[:5]:
+        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score_str']}</td></tr>")
 
 
 def parse_file(path):
