@@ -1,0 +1,116 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 16.0-CURRENT main-n283261-6f15ba8004c3 GENERIC
+Hardware: LenovoYoga11E 
+Score: 25/30
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x02 hdr=0x00 vendor=0x8086 device=0x5916 subvendor=0x17aa subdevice=0x5065
+        vendor     = 'Intel Corporation'
+        device     = 'HD Graphics 620'
+        class      = display
+        subclass   = VGA
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    iwm0@pci0:3:0:0:	class=0x028000 rev=0x61 hdr=0x00 vendor=0x8086 device=0x095b subvendor=0x8086 subdevice=0x5210
+        vendor     = 'Intel Corporation'
+        device     = 'Wireless 7265'
+        class      = network
+  Device 2 Status: DETECTED
+    re0@pci0:5:0:0:	class=0x020000 rev=0x10 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5065
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+--------------------
+
+- Audio
+  Device 1 Status: DETECTED
+    hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d71 subvendor=0x17aa subdevice=0x5065
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP HD Audio'
+        class      = multimedia
+        subclass   = HDA
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:23:0:	class=0x010601 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d03 subvendor=0x17aa subdevice=0x5065
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP SATA Controller [AHCI mode]'
+        class      = mass storage
+
+--------------------
+
+- USB Ports
+  Device 1 Status: DETECTED
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x17aa subdevice=0x5065
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+dmabuf.ko
+drm.ko
+geom_eli.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hpen.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwm.ko
+ig4.ko
+iic.ko
+iichid.ko
+lindebugfs.ko
+linuxkpi_video.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+pchtherm.ko
+smbus.ko
+ttm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   142
+Model name:              Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz
+Stepping:                9
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                3M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 avx2 smep bmi2 erms invpcid fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================

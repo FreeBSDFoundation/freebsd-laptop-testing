@@ -1,0 +1,40 @@
+name: Generate site on merge 
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Stitch HTML Fragments Recursively
+        run: |
+          cat header.html > index.html
+          python parse.py --rank >> index.html 
+          cat laptophead.html >> index.html
+          find . -type f -name "*.txt" -exec python parse.py "{}" >> index.html \;
+          cat footer.html >> index.html
+        env:
+          REPO_CONTEXT: ${{ github.repository }}
+          BRANCH_NAME: ${{ github.ref_name }}
+      - name: create html page 
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to Github Pages
+        uses: actions/deploy-pages@v4
+
