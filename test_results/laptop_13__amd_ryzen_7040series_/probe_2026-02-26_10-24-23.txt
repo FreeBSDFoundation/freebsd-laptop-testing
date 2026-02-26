@@ -2,91 +2,112 @@
 
 Running: FreeBSD 16.0-CURRENT #6 main-836ac989933b: Fri Feb 20 10:46:36 EST 2026     XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Hardware: Laptop 13 (AMD Ryzen 7040Series)
-Score: 25/30
 ------------------------------------
 
 - Graphics
   Device 1 Status: WORKS
+  Device Score: 2/2
     vgapci0@pci0:193:0:0:	class=0x030000 rev=0xc4 hdr=0x00 vendor=0x1002 device=0x15bf subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
         device     = 'Phoenix1'
         class      = display
         subclass   = VGA
 
+  Category Total Score: 2/2
+
 --------------------
 
 - Networking
   Device 1 Status: WORKS
+  Device Score: 2/2
     iwlwifi0@pci0:1:0:0:	class=0x028000 rev=0x1a hdr=0x00 vendor=0x8086 device=0x2725 subvendor=0x8086 subdevice=0x0024
         vendor     = 'Intel Corporation'
         device     = 'Wi-Fi 6E(802.11ax) AX210/AX1675* 2x2 [Typhoon Peak]'
         class      = network
 
+  Category Total Score: 2/2
+
 --------------------
 
 - Audio
   Device 1 Status: DETECTED
+  Device Score: 2/2
     hdac0@pci0:193:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
         device     = 'Radeon High Definition Audio Controller'
         class      = multimedia
         subclass   = HDA
   Device 2 Status: DETECTED
+  Device Score: 2/2
     hdac1@pci0:193:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         device     = 'Ryzen HD Audio Controller'
         class      = multimedia
         subclass   = HDA
 
+  Category Total Score: 4/4
+
 --------------------
 
 - Storage
   Device 1 Status: DETECTED
+  Device Score: 2/2
     nvme0@pci0:2:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x15b7 device=0x5017 subvendor=0x15b7 subdevice=0x5017
         vendor     = 'Sandisk Corp'
         device     = 'WD SN560/SN740/SN770/SN5000 NVMe SSD'
         class      = mass storage
 
+  Category Total Score: 2/2
+
 --------------------
 
 - USB Ports
   Device 1 Status: DETECTED
+  Device Score: 2/2
     xhci0@pci0:193:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b9 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         class      = serial bus
         subclass   = USB
   Device 2 Status: DETECTED
+  Device Score: 2/2
     xhci1@pci0:193:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15ba subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         class      = serial bus
         subclass   = USB
   Device 3 Status: DETECTED
+  Device Score: 2/2
     xhci2@pci0:195:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15c0 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         class      = serial bus
         subclass   = USB
   Device 4 Status: DETECTED
+  Device Score: 2/2
     xhci3@pci0:195:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15c1 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         class      = serial bus
         subclass   = USB
   Device 5 Status: DETECTED
+  Device Score: 2/2
     none8@pci0:195:0:5:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1668 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         device     = 'Pink Sardine USB4/Thunderbolt NHI controller'
         class      = serial bus
         subclass   = USB
   Device 6 Status: DETECTED
+  Device Score: 2/2
     none9@pci0:195:0:6:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1669 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         device     = 'Pink Sardine USB4/Thunderbolt NHI controller'
         class      = serial bus
         subclass   = USB
 
+  Category Total Score: 12/12
+
 --------------------
 
 - Bluetooth
   Status: NOT DETECTED
+  Category Total Score: 0/0
 
 --------------------
 
