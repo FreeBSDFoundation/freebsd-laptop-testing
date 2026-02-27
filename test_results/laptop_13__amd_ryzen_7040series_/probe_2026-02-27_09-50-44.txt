@@ -28,20 +28,18 @@ Hardware: Laptop 13 (AMD Ryzen 7040Series)
 --------------------
 
 - Audio
-  Device 1 Status: DETECTED
     hdac0@pci0:193:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
         device     = 'Radeon High Definition Audio Controller'
         class      = multimedia
         subclass   = HDA
-  Device 2 Status: DETECTED
     hdac1@pci0:193:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0xf111 subdevice=0x0006
         vendor     = 'Advanced Micro Devices, Inc. [AMD]'
         device     = 'Ryzen HD Audio Controller'
         class      = multimedia
         subclass   = HDA
 
-  Category Total Score: 4/4
+  Category Total Score: 2/2
 
 --------------------
 
