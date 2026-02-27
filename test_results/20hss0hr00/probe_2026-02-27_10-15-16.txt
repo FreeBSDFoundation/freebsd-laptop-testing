@@ -1,7 +1,7 @@
 === FreeBSD Hardware Status Info ===
 
 Running: FreeBSD 16.0-CURRENT main-n283261-6f15ba8004c3 GENERIC
-Hardware: LenovoYoga11E 
+Hardware: 20HSS0HR00
 ------------------------------------
 
 - Graphics
@@ -33,7 +33,6 @@ Hardware: LenovoYoga11E
 --------------------
 
 - Audio
-  Device 1 Status: DETECTED
     hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d71 subvendor=0x17aa subdevice=0x5065
         vendor     = 'Intel Corporation'
         device     = 'Sunrise Point-LP HD Audio'
@@ -56,7 +55,6 @@ Hardware: LenovoYoga11E
 --------------------
 
 - USB Ports
-  Device 1 Status: DETECTED
     xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x17aa subdevice=0x5065
         vendor     = 'Intel Corporation'
         device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
