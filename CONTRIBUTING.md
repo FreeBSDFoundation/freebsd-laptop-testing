@@ -4,6 +4,8 @@ The Laptop and Support Usability project is committed to ensure that FreeBSD wor
 
 ## Getting started
 
+You can run the script on either a standard FreeBSD system or through an [mfsbsd](https://github.com/mmatuska/mfsbsd) live USB, which will allow you to install packages on the live USB.
+
 1. First, `git clone` this repo. then run `pkg install python hw-probe` and type `make`. Supply your root password when prompted and a new file will be generated inside the `test_results` directory.
 
 2. Enter the `test_results` directory and view the file. The file will contain sections pertaining to devices on your system that are working and not working, along with more verbose output at the bottom.

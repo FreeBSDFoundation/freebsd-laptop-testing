@@ -78,64 +78,66 @@ def generate_hardware_summary(pciconf, hw_probe, output):
         "Bluetooth": ("bluetooth", "bluetooth")
     }
 
-    total_score = 0
     category_results = {}
 
     for label, (pci_key, probe_key) in categories.items():
         pci_blocks = get_device(pciconf, pci_key)
         probe_devices = get_hw_devices(hw_probe, probe_key)
-    #boolean for if its working
-        is_working = False
-        if pci_blocks:
-            for i in range(len(pci_blocks)):
-                status = probe_devices[i]["status"] if i < len(probe_devices) else "unknown"
-                if status.lower() in ["works", "detected"]:
-                    is_working = True
-                    break
-
-        if is_working:
-            total_score += 5
-
         category_results[label] = (pci_blocks, probe_devices)
 
     with open(output, "w") as out:
         out.write("=== FreeBSD Hardware Status Info ===\n\n")
         out.write(f"Running: {get_uname_details().strip()}\n")
         out.write(f"Hardware: {filename}\n")
-
-        out.write(f"Score: {total_score}/30\n")
         out.write("-" * 36 + "\n\n")
 
         for label, (pci_blocks, probe_devices) in category_results.items():
             out.write(f"- {label}\n")
-            if pci_blocks:
-                for i, block in enumerate(pci_blocks, 1):
-                    hw_status = (
-                        probe_devices[i - 1]["status"]
-                        if i - 1 < len(probe_devices)
-                        else "unknown"
-                    )
 
-                    out.write(f"  Device {i} Status: {hw_status.upper()}\n")
-                    indented = "    " + block.replace("\n", "\n    ").strip()
-                    out.write(f"{indented}\n")
+            # Categories that get a flat 2/2 if ANY device works
+            if label in ["USB Ports", "Audio"]:
+                any_working = any(d["status"].lower() in ["works", "detected"] for d in probe_devices)
+                score = 2 if any_working else 0
+                category_possible = 2
+
+                if pci_blocks:
+                    for i, block in enumerate(pci_blocks, 1):
+                        indented = "    " + block.replace("\n", "\n    ").strip()
+                        out.write(f"{indented}\n")
+                    out.write(f"\n  Category Total Score: {score}/{category_possible}\n")
+                else:
+                    out.write("  Status: NOT DETECTED\n")
+                    out.write(f"  Category Total Score: 0/{category_possible}\n")
+
             else:
-                out.write("  Status: NOT DETECTED\n")
+                # Original logic for Graphics, Networking, Storage, etc.
+                category_earned = 0
+                category_possible = len(pci_blocks) * 2
+
+                if pci_blocks:
+                    for i, block in enumerate(pci_blocks):
+                        status = probe_devices[i]["status"] if i < len(probe_devices) else "unknown"
+                        if status.lower() in ["works", "detected"]:
+                            category_earned += 2
+
+                        out.write(f"  Device {i + 1} Status: {status.upper()}\n")
+                        indented = "    " + block.replace("\n", "\n    ").strip()
+                        out.write(f"{indented}\n")
+
+                    out.write(f"\n  Category Total Score: {category_earned}/{category_possible}\n")
+                else:
+                    out.write("  Status: NOT DETECTED\n")
+                    out.write(f"  Category Total Score: 0/{category_possible}\n")
 
             out.write("\n" + "-" * 20 + "\n\n")
-        out.write("=== FreeBSD Detailed Status Info ==\n\n")
-        out.write("Currently loaded kernel modules:")
-        out.write("\n")
-        kld_data = get_kldstat()
-        out.write(kld_data)
-        out.write("\n" + "=" * 36 + "\n")
-        out.write("\n")
-        out.write("- CPU Info")
-        out.write("\n")
-        cpu_data = get_cpuinfo()
-        out.write(cpu_data)
-        out.write("\n" + "=" * 36 + "\n")
 
+        out.write("=== FreeBSD Detailed Status Info ==\n\n")
+        out.write("Currently loaded kernel modules:\n")
+        out.write(get_kldstat())
+        out.write("\n" + "=" * 36 + "\n\n")
+        out.write("- CPU Info\n")
+        out.write(get_cpuinfo())
+        out.write("\n" + "=" * 36 + "\n")
 
 
 def get_hw_devices(probe_file, category_name):
