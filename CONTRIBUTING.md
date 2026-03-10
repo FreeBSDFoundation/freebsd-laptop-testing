@@ -25,7 +25,7 @@ Any recent laptop hardware would be very helpful for our testing project. The mo
 
 For the Laptop Integration Testing Project specifically, we use Github Issues solely to triage and track open tasks that are assigned to The FreeBSD Foundation's staff. For this reason, issue creation in this repository is locked to Foundation staff only.
 
-We also keep Github Discussions open for you to:
+Instead, we keep Github Discussions open for you to:
 * Report bugs
 * Request more testing coverage
 * Ask about a particular scenario
