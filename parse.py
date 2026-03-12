@@ -2,6 +2,7 @@ import sys
 import re
 import glob
 from html import escape
+import os
 
 COLUMNS = ["Graphics", "Networking", "Audio", "Storage", "USB Ports"]
 
@@ -10,67 +11,91 @@ def get_rows():
     data_list = []
     for filepath in glob.glob("**/*.txt", recursive=True):
         try:
-            with open(filepath, 'r') as f:
-                content = f.read()
-                hw_match = re.search(r"Hardware:\s*(.*)", content)
-                score_match = re.search(r"Score:\s*(\d+)/", content)
-                if hw_match and score_match:
-                    data_list.append({
-                        "name": hw_match.group(1).strip(),
-                        "score": int(score_match.group(1))
-                    })
+            model, ranking, _, _ = parse_file(filepath)
+            if model and "/" in ranking:
+                earned = int(ranking.split('/')[0])
+                data_list.append({
+                    "name": model,
+                    "score_str": ranking,
+                    "earned": earned
+                })
         except Exception:
             continue
-
-    data_list.sort(key=lambda x: x['score'], reverse=True)
-    for item in data_list[:5]: #Slice off last 5 items for top score
-        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score']}</td></tr>")
+    data_list.sort(key=lambda x: x['earned'], reverse=True)
+    for item in data_list[:5]:
+        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score_str']}</td></tr>")
 
 
 def parse_file(path):
     with open(path) as f:
         lines = f.readlines()
 
-    model, ranking = None, None
+    model = "Unknown Hardware"
     data = {c: [] for c in COLUMNS}
+    scores = {c: None for c in COLUMNS}
+
+    total_earned = 0
+    total_possible = 0
     current_section = None
 
     for line in lines:
         line = line.rstrip()
         if line.startswith("Hardware:"):
-            model = line.split("Hardware:", 1)[1].strip()
-        elif line.startswith("Ranking:"):
-            ranking = line.split("Ranking:", 1)[1].strip()
-
-        m = re.match(r"-\s+(.+)", line)
-        if m:
-            section = m.group(1)
+            parts = line.split("Hardware:", 1)
+            if len(parts) > 1:
+                model = parts[1].strip()
+        m_sec = re.match(r"-\s+(.+)", line)
+        if m_sec:
+            section = m_sec.group(1)
             current_section = section if section in data else None
             continue
+        if current_section:
+            m_dev = re.match(r"\s*device\s+=\s+'(.+)'", line)
+            if m_dev:
+                data[current_section].append(m_dev.group(1))
+            m_score = re.search(r"Category Total Score:\s*(\d+)/(\d+)", line)
+            if m_score:
+                earned = int(m_score.group(1))
+                possible = int(m_score.group(2))
+                scores[current_section] = f"{earned}/{possible}"
+                total_earned += earned
+                total_possible += possible
 
-        m = re.match(r"\s*Status:\s+(.+)", line)
-        if m and current_section:
-            data[current_section].append(m.group(1))
-
-        m = re.match(r"\s*device\s+=\s+'(.+)'", line)
-        if m and current_section:
-            data[current_section].append(m.group(1))
-
-    return model, ranking, data
+    ranking = f"{total_earned}/{total_possible}"
+    return model, ranking, data, scores
 
 
-def emit_html(model, ranking, data):
-    print(f"<tr><td>{escape(model)}</td>", end="")
+def emit_html(model, ranking, data, scores, path):
+    repo = os.getenv('REPO_CONTEXT', 'unknown/repo')
+    branch = os.getenv('BRANCH_NAME', 'main')
+    clean_path = path.lstrip("./")
+    github_link = f"https://github.com/{repo}/blob/{branch}/{clean_path}"
+    file_dir = os.path.dirname(path)
+    comment_file = os.path.join(file_dir, "comment.md")
+    comment_link_html = ""
+    if os.path.exists(comment_file):
+        clean_comment_path = comment_file.lstrip("./")
+        comment_url = f"https://github.com/{repo}/blob/{branch}/{clean_comment_path}"
+        comment_link_html = f"<br><a href='{comment_url}' style='font-size: 0.8em;'>View Comment</a>"
+    print(f"<tr>", end="")
+    print(f"<td><strong>{escape(model)}</strong><br>", end="")
+    print(f"<a href='{github_link}' style='font-size: 0.8em;'>View Probe</a>", end="")
+    print(f"{comment_link_html}</td>", end="")
+
     for c in COLUMNS:
         items = data[c]
+        score_val = scores[c]
+
         if not items:
             cell = "&nbsp;"
         else:
             list_contents = "".join(f"<li>{escape(x)}</li>" for x in items)
-            cell = f"<ol style='margin: 0; padding-left: 1.5em;'>{list_contents}</ol>"
+            score_html = f"<div style='margin-top: 5px; border-top: 1px solid #ddd; font-size: 0.9em;'><strong>Score: {score_val}</strong></div>" if score_val else ""
+            cell = f"<ol style='margin: 0; padding-left: 1.5em;'>{list_contents}</ol>{score_html}"
+
         print(f"<td>{cell}</td>", end="")
-    score_display = ranking if ranking is not None else "&nbsp;"
-    print(f"<td>{score_display}</td>", end="")
+
+    print(f"<td><strong>{ranking}</strong></td>", end="")
     print("</tr>")
 
 
@@ -78,8 +103,9 @@ if __name__ == "__main__":
     if "--rank" in sys.argv:
         get_rows()
     elif len(sys.argv) == 2:
-        model, ranking, data = parse_file(sys.argv[1])
-        emit_html(model, ranking, data)
+        file_path = sys.argv[1]
+        model, ranking, data, scores = parse_file(file_path)
+        emit_html(model, ranking, data, scores, file_path)
     else:
         print("Usage: python parse.py --rank  or  python script.py <filename>")
         sys.exit(1)

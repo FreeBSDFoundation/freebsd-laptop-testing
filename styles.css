@@ -64,29 +64,40 @@ table {
     border-collapse: collapse;
     font-family: sans-serif;
 }
-.laptop-ranking tr:nth-child(2){
+
+.laptop-ranking {
+    width: 50vw;
+}
+.laptop-ranking tbody tr:nth-child(1) td {
     color: #ffd700;
 }
 
-.laptop-ranking tr:nth-child(3){
+.laptop-ranking tbody tr:nth-child(2) td {
     color: #c0c0c0;
 }
 
-.laptop-ranking tr:nth-child(4){
+.laptop-ranking tbody tr:nth-child(3) td {
     color: #cd7f32;
 }
 
-th, td {
+
+/* Change this section in your CSS */
+th {
     padding: 15px 20px;
-    text-align: center;
+    text-align: center; /* Centers the headings */
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+td {
+    padding: 15px 20px;
+    text-align: left;   /* Left-justifies the data cells */
     vertical-align: middle;
     border: 1px solid #ddd;
 }
 
-th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
 
 tr:nth-child(even) {
     background-color: #fafafa;
