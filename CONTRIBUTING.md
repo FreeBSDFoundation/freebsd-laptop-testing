@@ -6,7 +6,7 @@ The [Laptop and Support Usability project](https://github.com/FreeBSDFoundation/
 Either an [mfsbsd](https://github.com/mmatuska/mfsbsd) or a standard FreeBSD installation will work with this script. Use the mfsbsd evaluation ISO in the releases section of this repository for a live install that has everything you need out of the box. 
 
 **mfsbsd Live ISO**
-root password is `mfsroot`
+(root password is `mfsroot`)
 ```sh
 cd freebsd-laptop-testing
 make
