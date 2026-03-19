@@ -1,7 +1,7 @@
 === FreeBSD Hardware Status Info ===
 
 Running: FreeBSD 15.0-RELEASE-p4 releng/15.0-n281010-8ef0ed690df2 GENERIC
-Hardware: 20HSS0HR00
+Hardware: Lenovo Yoga 11e 
 ------------------------------------
 
 - Graphics
