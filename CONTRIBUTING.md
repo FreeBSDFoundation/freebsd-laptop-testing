@@ -3,16 +3,8 @@
 The [Laptop and Support Usability project](https://github.com/FreeBSDFoundation/proj-laptop) is committed to ensuring that FreeBSD works on [these test targets](https://github.com/FreeBSDFoundation/proj-laptop/tree/main/supported). However, we want FreeBSD to run smoothly on the laptops and desktops that you use! We would appreciate any help to test and validate your desired configurations as well.
 
 ## Getting started
-Either an [mfsbsd](https://github.com/mmatuska/mfsbsd) or a standard FreeBSD installation will work with this script. Use the mfsbsd evaluation ISO in the releases section of this repository for a live install that has everything you need out of the box. 
+Either an [mfsbsd](https://github.com/mmatuska/mfsbsd) or a standard FreeBSD installation will work with this script. mfsbsd is a live environment, which will work if you want to evaluate FreeBSD on a laptop without installing it to the internal drive.  
 
-**mfsbsd Live ISO**
-(root password is `mfsroot`)
-```sh
-cd freebsd-laptop-testing
-make
-```
-
-**Standard FreeBSD Install**
 ```sh
 pkg install python hw-probe
 git clone https://github.com/FreeBSDFoundation/freebsd-laptop-testing
