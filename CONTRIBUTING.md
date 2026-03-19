@@ -2,6 +2,15 @@
 
 The [Laptop and Support Usability project](https://github.com/FreeBSDFoundation/proj-laptop) is committed to ensuring that FreeBSD works on [these test targets](https://github.com/FreeBSDFoundation/proj-laptop/tree/main/supported). However, we want FreeBSD to run smoothly on the laptops and desktops that you use! We would appreciate any help to test and validate your desired configurations as well.
 
+We are gathering standardized testing reports from the community. These will be used to create a public compatibility matrix.
+
+Here's how it works: 
+1.  You run our testing tool that automatically probes your laptop hardware and logs what features work (or don't work). 
+2.  The tool creates a new directory containing the fully anonymized results. If you wish, you can also add your own commentary to a new file `comments.md` inside this directory.
+3.  You send the results in a Pull Request, making sure to answer the User Stories questionnaire in the template.
+4.  We process the report and publish the information to the compatibility matrix (no personal details will ever be published).
+5.  Success!
+
 ## Getting started
 
 ```sh
@@ -19,7 +28,7 @@ To contribute these test results, create a new pull request containing the new d
  
 ## What contributions we need
 
-Any recent laptop hardware would be very helpful for our testing project. The more platforms we can gather test data for, the better we can make the FreeBSD experience on laptops be. Since Wi-Fi is a core focus of the FreeBSD Laptop Project, a wide variety of network card vendors would be very helpful for developers.  
+Any recent laptop hardware would be very helpful for our testing project. The more platforms we can gather test data for, the better we can make the FreeBSD experience on laptops be. Since Wi-Fi is a core focus of the FreeBSD Laptop Project, a wide variety of network card vendors would be very helpful for developers.
 
 ### Need help?
 
