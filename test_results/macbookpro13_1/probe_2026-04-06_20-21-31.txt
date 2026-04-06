@@ -1,0 +1,121 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
+Hardware: MacBookPro13,1
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x0a hdr=0x00 vendor=0x8086 device=0x1926 subvendor=0x106b subdevice=0x0150
+        vendor     = 'Intel Corporation'
+        device     = 'Iris Graphics 540'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    brcmfmac0@pci0:2:0:0:	class=0x028000 rev=0x05 hdr=0x00 vendor=0x14e4 device=0x43a3 subvendor=0x106b subdevice=0x0159
+        vendor     = 'Broadcom Inc. and subsidiaries'
+        device     = 'BCM4350 802.11ac Wireless Network Adapter'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d70 subvendor=0x8086 subdevice=0x7270
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP HD Audio'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:1:0:0:	class=0x018002 rev=0x11 hdr=0x00 vendor=0x106b device=0x2003 subvendor=0x106b subdevice=0x2003
+        vendor     = 'Apple Inc.'
+        device     = 'S3X NVMe Controller'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x8086 subdevice=0x7270
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:7:0:0:	class=0x0c0330 rev=0x02 hdr=0x00 vendor=0x8086 device=0x15d4 subvendor=0x8086 subdevice=0x0000
+        vendor     = 'Intel Corporation'
+        device     = 'JHL6540 Thunderbolt 3 USB Controller (C step) [Alpine Ridge 4C 2016]'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+atopcase.ko
+bcm5974.ko
+bridgestp.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+ichsmb.ko
+if_brcmfmac.ko
+if_bridge.ko
+if_ure.ko
+ig4.ko
+intelspi.ko
+mac_ntpd.ko
+nlsysevent.ko
+nmdm.ko
+pf.ko
+sdio.ko
+smbus.ko
+spibus.ko
+uether.ko
+vmm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   78
+Model name:              Intel(R) Core(TM) i5-6360U CPU @ 2.00GHz
+Stepping:                3
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                4M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 hle avx2 smep bmi2 erms invpcid rtm fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
