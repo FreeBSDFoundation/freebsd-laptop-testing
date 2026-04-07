@@ -28,7 +28,7 @@ Hardware: SER8
         device     = 'Wi-Fi 6 AX200'
         class      = network
 
-  Category Total Score: 4/4
+  Category Total Score: 2/2
 
 --------------------
 
@@ -60,7 +60,7 @@ Hardware: SER8
         device     = 'P44 Pro NVMe SSD [Hollywood Beach]'
         class      = mass storage
 
-  Category Total Score: 4/4
+  Category Total Score: 2/2
 
 --------------------
 
@@ -93,7 +93,7 @@ Hardware: SER8
 
 - Bluetooth
   Status: NOT DETECTED
-  Category Total Score: 0/0
+  Category Total Score: 0/2
 
 --------------------
 
