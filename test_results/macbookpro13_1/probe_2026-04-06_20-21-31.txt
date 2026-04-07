@@ -23,7 +23,7 @@ Hardware: MacBookPro13,1
         device     = 'BCM4350 802.11ac Wireless Network Adapter'
         class      = network
 
-  Category Total Score: 2/2
+  Category Total Score: 1/2
 
 --------------------
 
