@@ -94,7 +94,6 @@ def generate_hardware_summary(pciconf, hw_probe, output):
         for label, (pci_blocks, probe_devices) in category_results.items():
             out.write(f"- {label}\n")
 
-            # Categories that get a flat 2/2 if ANY device works
             if label in ["USB Ports", "Audio"]:
                 any_working = any(d["status"].lower() in ["works", "detected"] for d in probe_devices)
                 score = 2 if any_working else 0
@@ -108,26 +107,23 @@ def generate_hardware_summary(pciconf, hw_probe, output):
                 else:
                     out.write("  Status: NOT DETECTED\n")
                     out.write(f"  Category Total Score: 0/{category_possible}\n")
-
             else:
-                # Original logic for Graphics, Networking, Storage, etc.
-                category_earned = 0
-                category_possible = len(pci_blocks) * 2
-
-                if pci_blocks:
+                category_possible = 2.0
+                category_earned = 0.0
+                num_devices = len(pci_blocks)
+                if num_devices > 0:
+                    points_per_device = category_possible / num_devices
                     for i, block in enumerate(pci_blocks):
                         status = probe_devices[i]["status"] if i < len(probe_devices) else "unknown"
                         if status.lower() in ["works", "detected"]:
-                            category_earned += 2
-
+                            category_earned += points_per_device
                         out.write(f"  Device {i + 1} Status: {status.upper()}\n")
                         indented = "    " + block.replace("\n", "\n    ").strip()
                         out.write(f"{indented}\n")
-
-                    out.write(f"\n  Category Total Score: {category_earned}/{category_possible}\n")
+                    out.write(f"\n  Category Total Score: {category_earned:g}/{category_possible:g}\n")
                 else:
                     out.write("  Status: NOT DETECTED\n")
-                    out.write(f"  Category Total Score: 0/{category_possible}\n")
+                    out.write(f"  Category Total Score: 0/{category_possible:g}\n")
 
             out.write("\n" + "-" * 20 + "\n\n")
 
