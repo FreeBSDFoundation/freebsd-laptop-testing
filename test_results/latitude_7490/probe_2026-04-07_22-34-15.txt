@@ -1,0 +1,150 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p4 GENERIC
+Hardware: Latitude 7490
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x07 hdr=0x00 vendor=0x8086 device=0x5917 subvendor=0x1028 subdevice=0x081c
+        vendor     = 'Intel Corporation'
+        device     = 'UHD Graphics 620'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    em0@pci0:0:31:6:	class=0x020000 rev=0x21 hdr=0x00 vendor=0x8086 device=0x15d7 subvendor=0x1028 subdevice=0x081c
+        vendor     = 'Intel Corporation'
+        device     = 'Ethernet Connection (4) I219-LM'
+        class      = network
+  Device 2 Status: WORKS
+    iwlwifi0@pci0:2:0:0:	class=0x028000 rev=0x1a hdr=0x00 vendor=0x8086 device=0x2725 subvendor=0x8086 subdevice=0x0024
+        vendor     = 'Intel Corporation'
+        device     = 'Wi-Fi 6E(802.11ax) AX210/AX1675* 2x2 [Typhoon Peak]'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040380 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d71 subvendor=0x1028 subdevice=0x081c
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP HD Audio'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:60:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa80a subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller PM9A1/PM9A3/980PRO'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x1028 subdevice=0x081c
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_video.ko
+acpi_wmi.ko
+coretemp.ko
+cpuctl.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+ext2fs.ko
+fdescfs.ko
+fusefs.ko
+geom_uzip.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hsctrl.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_urndis.ko
+ig4.ko
+iic.ko
+iichid.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_hdmi.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nullfs.ko
+pchtherm.ko
+pf.ko
+pflog.ko
+pty.ko
+rtsx.ko
+smbus.ko
+ttm.ko
+u3g.ko
+ucom.ko
+uether.ko
+vkbd.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   142
+Model name:              Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+Stepping:                10
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                8M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 hle avx2 smep bmi2 erms invpcid rtm fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
