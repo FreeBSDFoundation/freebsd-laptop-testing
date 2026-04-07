@@ -1,0 +1,195 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p2 GENERIC
+Hardware: Lenovo IdeaPad 5 15ALC05
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:3:0:0:	class=0x030000 rev=0xc1 hdr=0x00 vendor=0x1002 device=0x164c subvendor=0x17aa subdevice=0x3f95
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Lucienne'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: FAILED
+    none1@pci0:1:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x14c3 device=0x7961 subvendor=0x17aa subdevice=0xe0bc
+        vendor     = 'MEDIATEK Corp.'
+        device     = 'MT7921 802.11ax PCIe Wireless Network Adapter [Filogic 330]'
+        class      = network
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:3:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1637 subvendor=0x17aa subdevice=0x3802
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Renoir/Cezanne HDMI/DP Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:3:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x3838
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    nvme0@pci0:2:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa809 subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller 980 (DRAM-less)'
+        class      = mass storage
+  Device 2 Status: WORKS
+    ahci0@pci0:4:0:0:	class=0x010601 rev=0x81 hdr=0x00 vendor=0x1022 device=0x7901 subvendor=0x1022 subdevice=0x7901
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'FCH SATA Controller [AHCI mode]'
+        class      = mass storage
+  Device 3 Status: DETECTED
+    ahci1@pci0:4:0:1:	class=0x010601 rev=0x81 hdr=0x00 vendor=0x1022 device=0x7901 subvendor=0x1022 subdevice=0x7901
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'FCH SATA Controller [AHCI mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:3:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1639 subvendor=0x1022 subdevice=0x1639
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Renoir/Cezanne USB 3.1'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:3:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1639 subvendor=0x1022 subdevice=0x1639
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Renoir/Cezanne USB 3.1'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_video.ko
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_renoir_asd_bin.ko
+amdgpu_renoir_ce_bin.ko
+amdgpu_renoir_dmcub_bin.ko
+amdgpu_renoir_me_bin.ko
+amdgpu_renoir_mec_bin.ko
+amdgpu_renoir_pfp_bin.ko
+amdgpu_renoir_rlc_bin.ko
+amdgpu_renoir_sdma_bin.ko
+amdgpu_renoir_ta_bin.ko
+amdgpu_renoir_vcn_bin.ko
+amdsmn.ko
+amdtemp.ko
+bridgestp.ko
+cpuctl.ko
+dmabuf.ko
+drm.ko
+ext2fs.ko
+fdescfs.ko
+fusefs.ko
+geom_linux_lvm.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_bridge.ko
+if_rtwn_usb.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+ipdivert.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mac_priority.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_ether.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nlsysevent.ko
+nmdm.ko
+pf.ko
+pflog.ko
+pty.ko
+rtwn.ko
+smbus.ko
+snd_als4000.ko
+snd_atiixp.ko
+snd_cs4281.ko
+snd_driver.ko
+snd_envy24.ko
+snd_envy24ht.ko
+snd_fm801.ko
+snd_hdsp.ko
+snd_hdspe.ko
+snd_maestro3.ko
+snd_neomagic.ko
+snd_solo.ko
+snd_spicds.ko
+snd_t4dwave.ko
+snd_uaudio.ko
+snd_via82c686.ko
+snd_vibes.ko
+ttm.ko
+vboxdrv.ko
+vboxguest.ko
+vboxnetadp.ko
+vboxnetflt.ko
+vmm.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            16
+Thread(s) per core:      2
+Core(s) per socket:      8
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              23
+Model:                   104
+Model name:              AMD Ryzen 7 5700U with Radeon Graphics         
+Stepping:                1
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                512K
+L3 cache:                8M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
