@@ -1,0 +1,144 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
+Hardware: HP EliteBook 845 G7 Notebook PC
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:3:0:0:	class=0x030000 rev=0xd3 hdr=0x00 vendor=0x1002 device=0x1636 subvendor=0x103c subdevice=0x8760
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Renoir [Radeon Vega Series / Radeon Vega Mobile Series]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    iwlwifi0@pci0:1:0:0:	class=0x028000 rev=0x1a hdr=0x00 vendor=0x8086 device=0x2723 subvendor=0x8086 subdevice=0x0084
+        vendor     = 'Intel Corporation'
+        device     = 'Wi-Fi 6 AX200'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:3:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1637 subvendor=0x1002 subdevice=0x1637
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Renoir/Cezanne HDMI/DP Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:3:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x103c subdevice=0x8760
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:2:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x15b7 device=0x5009 subvendor=0x15b7 subdevice=0x5009
+        vendor     = 'Sandisk Corp'
+        device     = 'SanDisk Ultra 3D / WD PC SN530, IX SN530, Blue SN550 NVMe SSD (DRAM-less)'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:3:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1639 subvendor=0x103c subdevice=0x8760
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Renoir/Cezanne USB 3.1'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:3:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1639 subvendor=0x103c subdevice=0x8760
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Renoir/Cezanne USB 3.1'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_renoir_asd_bin.ko
+amdgpu_renoir_ce_bin.ko
+amdgpu_renoir_dmcub_bin.ko
+amdgpu_renoir_me_bin.ko
+amdgpu_renoir_mec_bin.ko
+amdgpu_renoir_pfp_bin.ko
+amdgpu_renoir_rlc_bin.ko
+amdgpu_renoir_sdma_bin.ko
+amdgpu_renoir_ta_bin.ko
+amdgpu_renoir_vcn_bin.ko
+autofs.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+fusefs.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_axge.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+smbus.ko
+ttm.ko
+ucom.ko
+uether.ko
+uplcom.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            12
+Thread(s) per core:      2
+Core(s) per socket:      6
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              23
+Model:                   96
+Model name:              AMD Ryzen 5 PRO 4650U with Radeon Graphics
+Stepping:                1
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                512K
+L3 cache:                8M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
