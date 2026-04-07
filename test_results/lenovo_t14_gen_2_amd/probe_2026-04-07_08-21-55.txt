@@ -5,35 +5,35 @@ Hardware: 20XLS0RA00
 ------------------------------------
 
 - Graphics
-  Device 1 Status: UNKNOWN
+  Device 1 Status: WORKS 
     vgapci0@pci0:6:0:0:	class=0x030000 rev=0xd2 hdr=0x00 vendor=0x1002 device=0x1638 subvendor=0x17aa subdevice=0x5094
         vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
         device     = 'Cezanne [Radeon Vega Series / Radeon Vega Mobile Series]'
         class      = display
         subclass   = VGA
 
-  Category Total Score: 0/2
+  Category Total Score: 2/2
 
 --------------------
 
 - Networking
-  Device 1 Status: UNKNOWN
+  Device 1 Status: WORKS
     re0@pci0:2:0:0:	class=0x020000 rev=0x0e hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5094
         vendor     = 'Realtek Semiconductor Co., Ltd.'
         device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
         class      = network
-  Device 2 Status: UNKNOWN
+  Device 2 Status: FAILED
     none1@pci0:3:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x14c3 device=0x7961 subvendor=0x17aa subdevice=0xe0bc
         vendor     = 'MEDIATEK Corp.'
         device     = 'MT7921 802.11ax PCIe Wireless Network Adapter [Filogic 330]'
         class      = network
-  Device 3 Status: UNKNOWN
+  Device 3 Status: WORKS
     re1@pci0:5:0:0:	class=0x020000 rev=0x15 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5094
         vendor     = 'Realtek Semiconductor Co., Ltd.'
         device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
         class      = network
 
-  Category Total Score: 0/6
+  Category Total Score: 1.5/2
 
 --------------------
 
@@ -49,18 +49,18 @@ Hardware: 20XLS0RA00
         class      = multimedia
         subclass   = HDA
 
-  Category Total Score: 0/2
+  Category Total Score: 2/2
 
 --------------------
 
 - Storage
-  Device 1 Status: UNKNOWN
+  Device 1 Status: WORKS
     nvme0@pci0:1:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x1c5c device=0x1639 subvendor=0x1c5c subdevice=0x1639
         vendor     = 'SK hynix'
         device     = 'PC611 NVMe Solid State Drive'
         class      = mass storage
 
-  Category Total Score: 0/2
+  Category Total Score: 2/2
 
 --------------------
 
@@ -76,7 +76,7 @@ Hardware: 20XLS0RA00
         class      = serial bus
         subclass   = USB
 
-  Category Total Score: 0/2
+  Category Total Score: 2/2
 
 --------------------
 
