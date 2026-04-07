@@ -1,0 +1,159 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
+Hardware: 20XLS0RA00
+------------------------------------
+
+- Graphics
+  Device 1 Status: UNKNOWN
+    vgapci0@pci0:6:0:0:	class=0x030000 rev=0xd2 hdr=0x00 vendor=0x1002 device=0x1638 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Cezanne [Radeon Vega Series / Radeon Vega Mobile Series]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Networking
+  Device 1 Status: UNKNOWN
+    re0@pci0:2:0:0:	class=0x020000 rev=0x0e hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+  Device 2 Status: UNKNOWN
+    none1@pci0:3:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x14c3 device=0x7961 subvendor=0x17aa subdevice=0xe0bc
+        vendor     = 'MEDIATEK Corp.'
+        device     = 'MT7921 802.11ax PCIe Wireless Network Adapter [Filogic 330]'
+        class      = network
+  Device 3 Status: UNKNOWN
+    re1@pci0:5:0:0:	class=0x020000 rev=0x15 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+  Category Total Score: 0/6
+
+--------------------
+
+- Audio
+    hdac0@pci0:6:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1637 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Renoir/Cezanne HDMI/DP Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:6:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Storage
+  Device 1 Status: UNKNOWN
+    nvme0@pci0:1:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x1c5c device=0x1639 subvendor=0x1c5c subdevice=0x1639
+        vendor     = 'SK hynix'
+        device     = 'PC611 NVMe Solid State Drive'
+        class      = mass storage
+
+  Category Total Score: 0/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:6:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1639 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Renoir/Cezanne USB 3.1'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:6:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1639 subvendor=0x17aa subdevice=0x5094
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Renoir/Cezanne USB 3.1'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_green_sardine_asd_bin.ko
+amdgpu_green_sardine_ce_bin.ko
+amdgpu_green_sardine_dmcub_bin.ko
+amdgpu_green_sardine_me_bin.ko
+amdgpu_green_sardine_mec_bin.ko
+amdgpu_green_sardine_pfp_bin.ko
+amdgpu_green_sardine_rlc_bin.ko
+amdgpu_green_sardine_sdma_bin.ko
+amdgpu_green_sardine_ta_bin.ko
+amdgpu_green_sardine_vcn_bin.ko
+amdsmn.ko
+amdtemp.ko
+bridgestp.ko
+cryptodev.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fusefs.ko
+geom_eli.ko
+geom_uzip.ko
+if_bridge.ko
+ig4.ko
+iic.ko
+intpm.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nlsysevent.ko
+nmdm.ko
+pf.ko
+pflog.ko
+rtsx.ko
+smbus.ko
+tmpfs.ko
+tpm.ko
+ttm.ko
+vmm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            12
+Thread(s) per core:      2
+Core(s) per socket:      6
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              25
+Model:                   80
+Model name:              AMD Ryzen 5 PRO 5650U with Radeon Graphics     
+Stepping:                0
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                512K
+L3 cache:                16M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
