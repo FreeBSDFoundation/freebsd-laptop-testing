@@ -1,0 +1,145 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
+Hardware: Latitude E4300                  
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x07 hdr=0x00 vendor=0x8086 device=0x2a42 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = 'Mobile 4 Series Chipset Integrated Graphics Controller'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    em0@pci0:0:25:0:	class=0x020000 rev=0x03 hdr=0x00 vendor=0x8086 device=0x10f5 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82567LM Gigabit Network Connection'
+        class      = network
+  Device 2 Status: DETECTED
+    bwn_pci0@pci0:12:0:0:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x14e4 device=0x4315 subvendor=0x1028 subdevice=0x000c
+        vendor     = 'Broadcom Inc. and subsidiaries'
+        device     = 'BCM4312 802.11b/g LP-PHY'
+        class      = network
+
+  Category Total Score: 4/4
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:27:0:	class=0x040300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x293e subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:31:2:	class=0x010400 rev=0x03 hdr=0x00 vendor=0x8086 device=0x282a subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801 Mobile SATA Controller [RAID mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    uhci0@pci0:0:26:0:	class=0x0c0300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x2937 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB UHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    uhci1@pci0:0:26:1:	class=0x0c0300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x2938 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB UHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    uhci2@pci0:0:26:2:	class=0x0c0300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x2939 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB UHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci0@pci0:0:26:7:	class=0x0c0320 rev=0x03 hdr=0x00 vendor=0x8086 device=0x293c subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB2 EHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    uhci3@pci0:0:29:0:	class=0x0c0300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x2934 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB UHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    uhci4@pci0:0:29:1:	class=0x0c0300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x2935 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB UHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    uhci5@pci0:0:29:2:	class=0x0c0300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x2936 subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB UHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci1@pci0:0:29:7:	class=0x0c0320 rev=0x03 hdr=0x00 vendor=0x8086 device=0x293a subvendor=0x1028 subdevice=0x024d
+        vendor     = 'Intel Corporation'
+        device     = '82801I (ICH9 Family) USB2 EHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+bcma.ko
+bcma_bhndb.ko
+bhnd.ko
+bhnd_pci.ko
+bhnd_pci_hostb.ko
+bhndb.ko
+bhndb_pci.ko
+bwn_v4_lp_ucode.ko
+gpiobus.ko
+ichsmb.ko
+if_bwn.ko
+mac_ntpd.ko
+siba.ko
+siba_bhndb.ko
+smbus.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            2
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   23
+Model name:              Intel(R) Core(TM)2 Duo CPU     P9400  @ 2.40GHz
+Stepping:                6
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                6M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 syscall nx lm lahf_lm
+
+====================================
