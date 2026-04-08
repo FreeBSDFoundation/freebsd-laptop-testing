@@ -1,7 +1,7 @@
 === FreeBSD Hardware Status Info ===
 
 Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
-Hardware: Laptop (13th Gen Intel Core)
+Hardware: Framework Laptop 13 (13th Gen Intel Core)
 ------------------------------------
 
 - Graphics
