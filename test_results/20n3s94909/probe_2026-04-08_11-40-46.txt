@@ -1,0 +1,169 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 14.4-RELEASE-p1 GENERIC
+Hardware: 20N3S94909
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x02 hdr=0x00 vendor=0x8086 device=0x3ea0 subvendor=0x17aa subdevice=0x2279
+        vendor     = 'Intel Corporation'
+        device     = 'WhiskeyLake-U GT2 [UHD Graphics 620]'
+        class      = display
+        subclass   = VGA
+  Device 2 Status: WORKS
+    ppt0@pci0:12:0:0:	class=0x030000 rev=0xc1 hdr=0x00 vendor=0x1002 device=0x73df subvendor=0x1da2 subdevice=0x445e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Navi 22 [Radeon RX 6700/6700 XT/6750 XT / 6800M/6850M XT]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    iwm0@pci0:0:20:3:	class=0x028000 rev=0x30 hdr=0x00 vendor=0x8086 device=0x9df0 subvendor=0x8086 subdevice=0x0030
+        vendor     = 'Intel Corporation'
+        device     = 'Cannon Point-LP CNVi [Wireless-AC]'
+        class      = network
+  Device 2 Status: DETECTED
+    em0@pci0:0:31:6:	class=0x020000 rev=0x30 hdr=0x00 vendor=0x8086 device=0x15bd subvendor=0x17aa subdevice=0x2279
+        vendor     = 'Intel Corporation'
+        device     = 'Ethernet Connection (6) I219-LM'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040380 rev=0x30 hdr=0x00 vendor=0x8086 device=0x9dc8 subvendor=0x17aa subdevice=0x2279
+        vendor     = 'Intel Corporation'
+        device     = 'Cannon Point-LP High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    ppt1@pci0:12:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0xab28 subvendor=0x1002 subdevice=0xab28
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Navi 21/23 HDMI/DP Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:61:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa809 subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller 980 (DRAM-less)'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x30 hdr=0x00 vendor=0x8086 device=0x9ded subvendor=0x17aa subdevice=0x2279
+        vendor     = 'Intel Corporation'
+        device     = 'Cannon Point-LP USB 3.1 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:7:0:0:	class=0x0c0330 rev=0x06 hdr=0x00 vendor=0x8086 device=0x15f0 subvendor=0x8086 subdevice=0x0000
+        vendor     = 'Intel Corporation'
+        device     = 'JHL7440 Thunderbolt 3 USB Controller [Titan Ridge DD 2018]'
+        class      = serial bus
+        subclass   = USB
+    xhci2@pci0:15:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1b21 device=0x1242 subvendor=0x1a58 subdevice=0x0004
+        vendor     = 'ASMedia Technology Inc.'
+        device     = 'ASM1142 USB 3.1 Host Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci3@pci0:16:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1b21 device=0x1242 subvendor=0x1a58 subdevice=0x0005
+        vendor     = 'ASMedia Technology Inc.'
+        device     = 'ASM1142 USB 3.1 Host Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci4@pci0:17:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1b21 device=0x1242 subvendor=0x1a58 subdevice=0x0006
+        vendor     = 'ASMedia Technology Inc.'
+        device     = 'ASM1142 USB 3.1 Host Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci5@pci0:58:0:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x15c1 subvendor=0x17aa subdevice=0x2279
+        vendor     = 'Intel Corporation'
+        device     = 'JHL6240 Thunderbolt 3 USB 3.1 Controller (Low Power) [Alpine Ridge LP 2016]'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+bridgestp.ko
+coretemp.ko
+cryptodev.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+i915kms.ko
+if_axge.ko
+if_bridge.ko
+if_iwm.ko
+ig4.ko
+iic.ko
+iwm9000fw.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nmdm.ko
+pchtherm.ko
+pf.ko
+rtsx.ko
+ttm.ko
+uether.ko
+uhid.ko
+ums.ko
+vmm.ko
+wmt.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   142
+Model name:              Intel(R) Core(TM) i5-8365U CPU @ 1.60GHz
+Stepping:                12
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                6M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 hle avx2 smep bmi2 erms invpcid rtm fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
