@@ -36,7 +36,7 @@ def get_rows():
             continue
 
     for item in data_list[:10]:
-        print(f"<tr><td>{escape(item['name'])}</td><td><span class='score-badge'>{item['score_str']}</span></td></tr>")
+        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score_str']}</td></tr>")
 
 
 def parse_file(path):
@@ -94,12 +94,9 @@ def emit_html(model, ranking, data, scores, path):
         comment_link_html = f"<br><a href='{comment_url}'>View Comments</a>"
 
     print(f"<tr>", end="")
-    # Model cell
-    print(f"<td data-label='Model'>", end="")
-    print(f"<div class='mob-header'><span class='mob-label-text'>Model</span></div>", end="")
-    print(f"<div class='cell-content'><strong>{escape(model)}</strong><br>", end="")
+    print(f"<td data-label='Model'><strong>{escape(model)}</strong><br>", end="")
     print(f"<a href='{github_link}'>View Probe</a>", end="")
-    print(f"{comment_link_html}</div></td>", end="")
+    print(f"{comment_link_html}</td>", end="")
 
     for c in COLUMNS:
         items = data[c]
@@ -109,17 +106,10 @@ def emit_html(model, ranking, data, scores, path):
             print(f"<td data-label='{c}' data-empty='1'>&nbsp;</td>", end="")
         else:
             list_contents = "".join(f"<li>{escape(x)}</li>" for x in items)
-            score_html = f"<div class='cell-score'><strong>Score: {score_val}</strong></div>" if score_val else ""
-            score_pill = f"<span class='mob-score-pill'>Score {score_val}</span>" if score_val else ""
-            print(f"<td data-label='{c}'>", end="")
-            print(f"<div class='mob-header'><span class='mob-label-text'>{c}</span>{score_pill}</div>", end="")
-            print(f"<div class='cell-content'><ol>{list_contents}</ol>{score_html}</div>", end="")
-            print(f"</td>", end="")
+            score_html = f"<br><span style='display:block; margin-top:6px; padding-top:5px; border-top:1px solid #ddd; font-weight:bold;'>Score: {score_val}</span>" if score_val else ""
+            print(f"<td data-label='{c}'><ol>{list_contents}</ol>{score_html}</td>", end="")
 
-    # Total score cell
-    print(f"<td data-label='Score'>", end="")
-    print(f"<div class='mob-header'><span class='mob-label-text'>Total Score</span></div>", end="")
-    print(f"<span class='score-badge'>{ranking}</span></td>", end="")
+    print(f"<td>{ranking}</td>", end="")
     print("</tr>")
 
 
