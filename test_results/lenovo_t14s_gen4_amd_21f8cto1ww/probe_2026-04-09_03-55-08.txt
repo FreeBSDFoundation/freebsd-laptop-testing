@@ -1,0 +1,175 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-STABLE stable/15-n282812-de344ffd0ace GENERIC
+Hardware: 21F8CTO1WW
+------------------------------------
+
+- Graphics
+  Device 1 Status: UNKNOWN
+    vgapci0@pci0:195:0:0:	class=0x030000 rev=0xdd hdr=0x00 vendor=0x1002 device=0x15bf subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Phoenix1'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Networking
+  Device 1 Status: UNKNOWN
+    none3@pci0:1:0:0:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x17cb device=0x1103 subvendor=0x17aa subdevice=0x9309
+        vendor     = 'Qualcomm Technologies, Inc'
+        device     = 'QCNFA765 Wireless Network Adapter'
+        class      = network
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:195:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Radeon High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:195:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Storage
+  Device 1 Status: UNKNOWN
+    nvme0@pci0:2:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa80a subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller PM9A1/PM9A3/980PRO'
+        class      = mass storage
+
+  Category Total Score: 0/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:195:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b9 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:195:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15ba subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci2@pci0:197:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15c0 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci3@pci0:197:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15c1 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    none9@pci0:197:0:5:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1668 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Pink Sardine USB4/Thunderbolt NHI controller'
+        class      = serial bus
+        subclass   = USB
+    none10@pci0:197:0:6:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1669 subvendor=0x17aa subdevice=0x50d8
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Pink Sardine USB4/Thunderbolt NHI controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_dcn_3_1_4_dmcub_bin.ko
+amdgpu_gc_11_0_1_imu_bin.ko
+amdgpu_gc_11_0_1_me_bin.ko
+amdgpu_gc_11_0_1_mec_bin.ko
+amdgpu_gc_11_0_1_mes1_bin.ko
+amdgpu_gc_11_0_1_mes_2_bin.ko
+amdgpu_gc_11_0_1_pfp_bin.ko
+amdgpu_gc_11_0_1_rlc_bin.ko
+amdgpu_psp_13_0_4_ta_bin.ko
+amdgpu_psp_13_0_4_toc_bin.ko
+amdgpu_sdma_6_0_1_bin.ko
+amdgpu_vcn_4_0_2_bin.ko
+amdsmn.ko
+amdtemp.ko
+bridgestp.ko
+cryptodev.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+fusefs.ko
+geom_eli.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hsctrl.ko
+if_bridge.ko
+if_rtwn_usb.ko
+if_wg.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nmdm.ko
+nullfs.ko
+pf.ko
+pflog.ko
+rtwn.ko
+smbus.ko
+ttm.ko
+vmm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            16
+Thread(s) per core:      2
+Core(s) per socket:      8
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              25
+Model:                   116
+Model name:              AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics  
+Stepping:                1
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                1024K
+L3 cache:                16M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
