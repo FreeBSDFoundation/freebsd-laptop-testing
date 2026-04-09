@@ -36,7 +36,7 @@ def get_rows():
             continue
 
     for item in data_list[:10]:
-        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score_str']}</td></tr>")
+        print(f"<tr><td>{escape(item['name'])}</td><td><span class='score-badge'>{item['score_str']}</span></td></tr>")
 
 
 def parse_file(path):
@@ -80,7 +80,7 @@ def parse_file(path):
 
 
 def emit_html(model, ranking, data, scores, path):
-    repo = os.getenv('REPO_CONTEXT', 'unknown/repo')
+    repo = os.getenv('REPO_CONTEXT', 'FreeBSDFoundation/freebsd-laptop-testing')
     branch = os.getenv('BRANCH_NAME', 'main')
     clean_path = path.lstrip("./")
     github_link = f"https://github.com/{repo}/blob/{branch}/{clean_path}"
@@ -91,27 +91,35 @@ def emit_html(model, ranking, data, scores, path):
     if os.path.exists(comment_file):
         clean_comment_path = comment_file.lstrip("./")
         comment_url = f"https://github.com/{repo}/blob/{branch}/{clean_comment_path}"
-        comment_link_html = f"<br><a href='{comment_url}' style='font-size: 0.8em;'>View Comment</a>"
+        comment_link_html = f"<br><a href='{comment_url}'>View Comments</a>"
 
     print(f"<tr>", end="")
-    print(f"<td><strong>{escape(model)}</strong><br>", end="")
-    print(f"<a href='{github_link}' style='font-size: 0.8em;'>View Probe</a>", end="")
-    print(f"{comment_link_html}</td>", end="")
+    # Model cell
+    print(f"<td data-label='Model'>", end="")
+    print(f"<div class='mob-header'><span class='mob-label-text'>Model</span></div>", end="")
+    print(f"<div class='cell-content'><strong>{escape(model)}</strong><br>", end="")
+    print(f"<a href='{github_link}'>View Probe</a>", end="")
+    print(f"{comment_link_html}</div></td>", end="")
 
     for c in COLUMNS:
         items = data[c]
         score_val = scores[c]
 
         if not items:
-            cell = "&nbsp;"
+            print(f"<td data-label='{c}' data-empty='1'>&nbsp;</td>", end="")
         else:
             list_contents = "".join(f"<li>{escape(x)}</li>" for x in items)
-            score_html = f"<div style='margin-top: 5px; border-top: 1px solid #ddd; font-size: 0.9em;'><strong>Score: {score_val}</strong></div>" if score_val else ""
-            cell = f"<ol style='margin: 0; padding-left: 1.5em;'>{list_contents}</ol>{score_html}"
+            score_html = f"<div class='cell-score'><strong>Score: {score_val}</strong></div>" if score_val else ""
+            score_pill = f"<span class='mob-score-pill'>Score {score_val}</span>" if score_val else ""
+            print(f"<td data-label='{c}'>", end="")
+            print(f"<div class='mob-header'><span class='mob-label-text'>{c}</span>{score_pill}</div>", end="")
+            print(f"<div class='cell-content'><ol>{list_contents}</ol>{score_html}</div>", end="")
+            print(f"</td>", end="")
 
-        print(f"<td>{cell}</td>", end="")
-
-    print(f"<td><strong>{ranking}</strong></td>", end="")
+    # Total score cell
+    print(f"<td data-label='Score'>", end="")
+    print(f"<div class='mob-header'><span class='mob-label-text'>Total Score</span></div>", end="")
+    print(f"<span class='score-badge'>{ranking}</span></td>", end="")
     print("</tr>")
 
 

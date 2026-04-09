@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeBSD Laptop Compatibility</title>
 
     <link rel="stylesheet" href="styles.css">
@@ -17,18 +19,21 @@
         </div>
     </header>
     <main>
-        <div class="blurb">
-            <h3>Top Laptops for use with FreeBSD</h3>
-            <p>Each laptop is scored based on an aggregate of:</p>
-            <ul style="list-style-type:circle;">
-                <li>how many laptop components are detected, where each fully auto-detected component adds a point</li>
-                <li>whether devices have degraded functionality, reducing the score by 0.5-1.5 based on severity and how important it is to the laptop experience (wi-fi/graphics weighted more)</li>
-                <li>user-provided comments about test results, and how involved setup is for that device</li>
-            </ul>
-        </div>
-<table class="laptop-ranking">
-<!-- Start top laptop table -->
-    <thead>
-        <tr><th>Model</th><th>Score</th></tr>
-    </thead>
-    <tbody>
+        <div class="page-content">
+            <div class="blurb">
+                <h2>Top Laptops for use with FreeBSD</h2>
+                <p>Each laptop is scored based on an aggregate of:</p>
+                <ul style="list-style-type:circle;">
+                    <li>How many laptop components are detected, where each fully auto-detected component adds a point</li>
+                    <li>Whether devices have degraded functionality, reducing the score by 0.5-1.5 based on severity and how important it is to the laptop experience (Wi-Fi/Graphics weighted more)</li>
+                    <li>User provided comments about test results, and how involved setup is for that device</li>
+                </ul>
+            </div>
+            <table class="laptop-ranking" aria-label="Top laptops ranked by FreeBSD compatibility score">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>

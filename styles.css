@@ -1,105 +1,438 @@
-.site-header {
-    border-bottom: 4px solid #007acc; /* blue line */
-    padding: 16px;
-}
+/* ── Reset & base ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.logo-container {
-    display: flex;
-    align-items: center; 
-    gap: 12px;
-}
-
-.logo-container img {
-    height: 80px;
-}
-
-.logo-container h1 {
-    font-size: 1.8rem;
-    margin: 0; /* remove default h1 margin */
-}
-.blurb h3{
-    text-align: center;
-}
-h3 {
-    text-align: center;
-}
-.blurb p {
-    text-align: center;
-}
-
-ul {
-  display: inline-block; /* Makes the list width match the text */
-  text-align: left;      /* Keeps bullets next to the text */
-}
-.blurb {
-    text-align: center;
-}
-/* Ensure the page takes up the full height of the screen */
 html, body {
     height: 100%;
-    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: #1a202c;
+    background: #f7f8fc;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
-    flex: 1; /* This grows to fill all space, pushing footer down */
+    flex: 1;
 }
 
-.horizontal-footer {
+/* ── Site header ───────────────────────────────────────────── */
+.site-header {
+    background: #ffffff;
+    border-bottom: 3px solid #ab2b28;
+    padding: 14px 32px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+.logo-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    border-top: 1px solid #ccc;
+    align-items: center;
+    gap: 14px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+.logo-container img {
+    height: 52px;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    letter-spacing: -0.3px;
+}
+
+/* ── Page wrapper ──────────────────────────────────────────── */
+.page-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 36px 28px;
+}
+
+/* ── Blurb / intro card ────────────────────────────────────── */
+.blurb {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2a9c2a;
+    border-radius: 0 8px 8px 0;
+    padding: 22px 28px;
+    margin-bottom: 36px;
+    text-align: left;
+}
+
+.blurb h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.blurb p {
+    color: #4a5568;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.blurb ul {
+    display: block;
+    padding-left: 1.4em;
+    color: #4a5568;
+    text-align: left;
+    margin-top: 4px;
+}
+
+.blurb ul li {
+    margin-bottom: 4px;
+}
+
+/* ── Section headings ──────────────────────────────────────── */
+h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 8px 0 16px;
+    text-align: left;
+}
+
+.blurb h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* ── Focus styles for keyboard navigation ──────────────────── */
+:focus-visible {
+    outline: 3px solid #ab2b28;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* ── Tables ────────────────────────────────────────────────── */
 table {
-    width: 90%;
-    max-width: 2300px;
-    margin: 40px auto;
+    width: 100%;
     border-collapse: collapse;
-    font-family: sans-serif;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin-bottom: 40px;
+    font-size: 0.91rem;
 }
 
-.laptop-ranking {
-    width: 50vw;
-}
-.gold td {
-    color: #d4af37;
-    font-weight: bold;
-}
-
-.silver td {
-    color: #8a8a8a;
-    font-weight: bold;
-}
-
-.bronze td {
-    color: #cd7f32;
-    font-weight: bold;
+thead {
+    background: #1a202c;
 }
 
 th {
-    padding: 15px 20px;
-    text-align: center; /* Centers the headings */
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    background-color: #f4f4f4;
-    font-weight: bold;
+    padding: 13px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.80rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #cbd5e0;
+    border: none;
+    white-space: nowrap;
 }
 
 td {
-    padding: 15px 20px;
-    text-align: left;   /* Left-justifies the data cells */
-    vertical-align: middle;
-    border: 1px solid #ddd;
+    padding: 13px 18px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
 }
 
+tbody tr:last-child td {
+    border-bottom: none;
+}
 
-tr:nth-child(even) {
-    background-color: #fafafa;
+tbody tr:hover td {
+    background: #ebf4ff;
+}
+
+tbody tr:nth-child(even) td {
+    background: #f9fafc;
+}
+
+tbody tr:nth-child(even):hover td {
+    background: #ebf4ff;
+}
+
+td ol {
+    margin: 0;
+    padding-left: 1.3em;
+}
+
+td ol li {
+    margin-bottom: 3px;
+    font-size: 0.94em;
+    font-weight: 500;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ── Top laptops ranking table ─────────────────────────────── */
+.laptop-ranking {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.laptop-ranking td:last-child,
+.laptop-ranking th:last-child {
+    text-align: center;
+}
+
+/* ── Medal rows ────────────────────────────────────────────── */
+.gold td   { background: #fffbeb !important; color: #92610a; font-weight: 600; }
+.silver td { background: #f8fafc !important; color: #4b5563; font-weight: 600; }
+.bronze td { background: #fff5f0 !important; color: #9a3c12; font-weight: 600; }
+
+/* ── Score badge ───────────────────────────────────────────── */
+.score-badge {
+    display: inline-block;
+    background: #1a202c;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 3px 11px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ── Links inside table cells ──────────────────────────────── */
+td a {
+    color: #ab2b28;
+    text-decoration: none;
+    font-size: 0.82em;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* ── Responsive wrapper for the compatibility matrix ──────── */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin-bottom: 40px;
+}
+
+.compat-table {
+    table-layout: fixed;
+    min-width: 660px;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.compat-table th:nth-child(1) { width: 22%; }
+.compat-table th:nth-child(2) { width: 19%; }
+.compat-table th:nth-child(3) { width: 19%; }
+.compat-table th:nth-child(4) { width: 15%; }
+.compat-table th:nth-child(5) { width: 15%; }
+.compat-table th:nth-child(6) { width: 10%; }
+
+.compat-table td {
+    vertical-align: top;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.compat-table td:last-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* ── mob-header: hidden on desktop, shown inside cards on mobile ── */
+.mob-header {
+    display: none;
+}
+
+/* ── Mobile: card layout for compatibility matrix ─────────── */
+@media (max-width: 900px) {
+    .page-content {
+        padding: 20px 14px;
+    }
+
+    .table-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        overflow-x: visible;
+    }
+
+    .compat-table,
+    .compat-table thead,
+    .compat-table tbody,
+    .compat-table th,
+    .compat-table td,
+    .compat-table tr {
+        display: block;
+    }
+
+    .compat-table {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .compat-table thead {
+        display: none;
+    }
+
+    .compat-table tbody tr {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        margin-bottom: 16px;
+        padding: 4px 0;
+    }
+
+    .compat-table tbody tr:hover td,
+    .compat-table tbody tr:nth-child(even) td {
+        background: transparent;
+    }
+
+    .compat-table td {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 14px;
+        border-bottom: 1px solid #edf2f7;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .compat-table td:last-child {
+        border-bottom: none;
+        align-items: center;
+    }
+
+    /* disable the old ::before label trick */
+    .compat-table td::before {
+        content: none;
+        display: none;
+    }
+
+    /* show the mob-header inside each card row */
+    .mob-header {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: 116px;
+        gap: 5px;
+        padding-top: 2px;
+    }
+
+    .mob-label-text {
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #718096;
+        line-height: 1.2;
+    }
+
+    .mob-score-pill {
+        display: inline-block;
+        font-size: 0.80rem;
+        font-weight: 700;
+        color: #1a202c;
+        background: #edf2f7;
+        border-radius: 5px;
+        padding: 1px 7px;
+        line-height: 1.5;
+        align-self: flex-start;
+    }
+
+    /* score is shown in mob-header — hide it from the content column */
+    .compat-table .cell-score {
+        display: none;
+    }
+
+    /* hide empty cells entirely */
+    .compat-table td[data-empty="1"] {
+        display: none;
+    }
+
+    .cell-content {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* ── Score sub-row in compatibility matrix ─────────────────── */
+.cell-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    flex: 1;
+}
+
+.cell-score {
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px solid #edf2f7;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.horizontal-footer {
+    background: #1a202c;
+    color: #cbd5e0;
+    font-size: 0.86rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 28px 32px;
+    border-top: 3px solid #ab2b28;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-copy {
+    color: #cbd5e0;
+    max-width: 680px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.horizontal-footer a {
+    color: #e2e8f0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.horizontal-footer a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .horizontal-footer {
+        padding: 18px 14px;
+    }
 }
