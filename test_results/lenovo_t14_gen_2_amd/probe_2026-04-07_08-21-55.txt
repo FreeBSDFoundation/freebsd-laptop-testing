@@ -33,7 +33,7 @@ Hardware: Lenovo ThinkPad T14 Gen 2 (AMD)
         device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
         class      = network
 
-  Category Total Score: 1.5/2
+  Category Total Score: 0.5/2 
 
 --------------------
 
