@@ -1,0 +1,173 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 GENERIC
+Hardware: ASUS TUF Gaming F15 FX507VU_FX507VU
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci1@pci0:0:2:0:	class=0x030000 rev=0x04 hdr=0x00 vendor=0x8086 device=0xa7a8 subvendor=0x1043 subdevice=0x14a3
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P [UHD Graphics]'
+        class      = display
+        subclass   = VGA
+  Device 2 Status: WORKS
+    vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x28e1 subvendor=0x1043 subdevice=0x14a3
+        vendor     = 'NVIDIA Corporation'
+        device     = 'AD107M [GeForce RTX 4050 Max-Q / Mobile]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    iwx0@pci0:0:20:3:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51f1 subvendor=0x8086 subdevice=0x0074
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake PCH CNVi WiFi'
+        class      = network
+  Device 2 Status: WORKS
+    re0@pci0:55:0:0:	class=0x020000 rev=0x15 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x1043 subdevice=0x208f
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac1@pci0:0:31:3:	class=0x040380 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ca subvendor=0x1043 subdevice=0x14a3
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P/U/H cAVS'
+        class      = multimedia
+        subclass   = HDA
+    hdac0@pci0:1:0:1:	class=0x040300 rev=0xa1 hdr=0x00 vendor=0x10de device=0x22be subvendor=0x1043 subdevice=0x14a3
+        vendor     = 'NVIDIA Corporation'
+        device     = 'AD107 High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    pcib3@pci0:0:14:0:	class=0x010400 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa77f subvendor=0x8086 subdevice=0x0000
+        vendor     = 'Intel Corporation'
+        device     = 'RST Volume Management Device Controller'
+        class      = mass storage
+  Device 2 Status: DETECTED
+    nvme0@pci65532:225:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x15b7 device=0x5017 subvendor=0x15b7 subdevice=0x5017
+        vendor     = 'Sandisk Corp'
+        device     = 'WD SN560/SN740/SN770/SN5000 NVMe SSD'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:13:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa71e subvendor=0x0000 subdevice=0x0000
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P Thunderbolt 4 USB Controller'
+        class      = serial bus
+        subclass   = USB
+    none3@pci0:0:13:2:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa73e subvendor=0x2222 subdevice=0x1111
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P Thunderbolt 4 NHI'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:0:20:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ed subvendor=0x1043 subdevice=0x201f
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake PCH USB 3.2 xHCI Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_asus_wmi.ko
+acpi_wmi.ko
+cryptodev.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+geom_eli.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hsctrl.ko
+i915kms.ko
+ichsmb.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+ipfw.ko
+ipsec.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_iface.ko
+ng_ksocket.ko
+ng_l2tp.ko
+ng_mppc.ko
+ng_ppp.ko
+ng_socket.ko
+ng_tee.ko
+ng_ubt.ko
+nlsysevent.ko
+nvidia-drm.ko
+nvidia-modeset.ko
+nvidia.ko
+pty.ko
+rc4.ko
+smbus.ko
+ttm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            16
+Thread(s) per core:      2
+Core(s) per socket:      8
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   186
+Model name:              13th Gen Intel(R) Core(TM) i7-13620H
+Stepping:                2
+L1d cache:               48K
+L1i cache:               32K
+L2 cache:                1280K
+L3 cache:                24M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust bmi1 avx2 fp_dp smep bmi2 erms invpcid fpcsds rdseed adx smap clflushopt clwb intel_pt umip pku ospke syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
