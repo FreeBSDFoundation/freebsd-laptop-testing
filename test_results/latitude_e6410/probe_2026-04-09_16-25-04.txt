@@ -1,0 +1,115 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p4 releng/15.0-n281010-8ef0ed690df2 GENERIC
+Hardware: Latitude E6410
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa2 hdr=0x00 vendor=0x10de device=0x0a6c subvendor=0x1028 subdevice=0x040a
+        vendor     = 'NVIDIA Corporation'
+        device     = 'GT218M [NVS 3100M]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    em0@pci0:0:25:0:	class=0x020000 rev=0x05 hdr=0x00 vendor=0x8086 device=0x10ea subvendor=0x1028 subdevice=0x040a
+        vendor     = 'Intel Corporation'
+        device     = '82577LM Gigabit Network Connection'
+        class      = network
+  Device 2 Status: WORKS
+    iwn0@pci0:3:0:0:	class=0x028000 rev=0x35 hdr=0x00 vendor=0x8086 device=0x422c subvendor=0x8086 subdevice=0x1321
+        vendor     = 'Intel Corporation'
+        device     = 'Centrino Advanced-N 6200'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac1@pci0:0:27:0:	class=0x040300 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b56 subvendor=0x1028 subdevice=0x040a
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset High Definition Audio'
+        class      = multimedia
+        subclass   = HDA
+    hdac0@pci0:1:0:1:	class=0x040300 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0be3 subvendor=0x1028 subdevice=0x040a
+        vendor     = 'NVIDIA Corporation'
+        device     = 'High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:31:2:	class=0x010400 rev=0x05 hdr=0x00 vendor=0x8086 device=0x282a subvendor=0x1028 subdevice=0x040a
+        vendor     = 'Intel Corporation'
+        device     = '82801 Mobile SATA Controller [RAID mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    ehci0@pci0:0:26:0:	class=0x0c0320 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b3c subvendor=0x1028 subdevice=0x040a
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset USB2 Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci1@pci0:0:29:0:	class=0x0c0320 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b34 subvendor=0x1028 subdevice=0x040a
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset USB2 Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+ichsmb.ko
+linux.ko
+linux_common.ko
+mac_ntpd.ko
+mqueuefs.ko
+nvidia.ko
+smbus.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   37
+Model name:              Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
+Stepping:                2
+L1d cache:               32K
+L1i cache:               32K
+L3 cache:                3M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes syscall nx rdtscp lm lahf_lm
+
+====================================
