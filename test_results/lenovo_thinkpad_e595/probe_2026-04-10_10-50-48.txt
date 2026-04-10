@@ -1,0 +1,158 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
+Hardware: 20NFCTO1WW
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:4:0:0:	class=0x030000 rev=0xc2 hdr=0x00 vendor=0x1002 device=0x15d8 subvendor=0x17aa subdevice=0x5124
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Picasso/Raven 2 [Radeon Vega Series / Radeon Vega Mobile Series]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    iwm0@pci0:3:0:0:	class=0x028000 rev=0x29 hdr=0x00 vendor=0x8086 device=0x2526 subvendor=0x8086 subdevice=0x0014
+        vendor     = 'Intel Corporation'
+        device     = 'Wi-Fi 5(802.11ac) Wireless-AC 9x6x [Thunder Peak]'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:4:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x15de subvendor=0x17aa subdevice=0x5124
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Raven/Raven2/Fenghuang HDMI/DP Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:4:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x5124
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    nvme0@pci0:1:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x15b7 device=0x5006 subvendor=0x15b7 subdevice=0x5006
+        vendor     = 'Sandisk Corp'
+        device     = 'SanDisk Extreme Pro / WD Black SN750 / PC SN730 / Red SN700 NVMe SSD'
+        class      = mass storage
+  Device 2 Status: DETECTED
+    ahci0@pci0:5:0:0:	class=0x010601 rev=0x61 hdr=0x00 vendor=0x1022 device=0x7901 subvendor=0x17aa subdevice=0x5124
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'FCH SATA Controller [AHCI mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:4:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e0 subvendor=0x17aa subdevice=0x5124
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raven USB 3.1'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:4:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e1 subvendor=0x17aa subdevice=0x5124
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raven USB 3.1'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_picasso_asd_bin.ko
+amdgpu_picasso_ce_bin.ko
+amdgpu_picasso_gpu_info_bin.ko
+amdgpu_picasso_me_bin.ko
+amdgpu_picasso_mec2_bin.ko
+amdgpu_picasso_mec_bin.ko
+amdgpu_picasso_pfp_bin.ko
+amdgpu_picasso_rlc_bin.ko
+amdgpu_picasso_sdma_bin.ko
+amdgpu_picasso_ta_bin.ko
+amdgpu_picasso_vcn_bin.ko
+amdgpu_raven_dmcu_bin.ko
+autofs.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hsctrl.ko
+if_iwlwifi.ko
+if_iwm.ko
+iic.ko
+intpm.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nlsysevent.ko
+nullfs.ko
+pty.ko
+rtsx.ko
+smbus.ko
+ttm.ko
+ucom.ko
+uplcom.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              23
+Model:                   24
+Model name:              AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+Stepping:                1
+L1d cache:               32K
+L1i cache:               64K
+L2 cache:                512K
+L3 cache:                4M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
