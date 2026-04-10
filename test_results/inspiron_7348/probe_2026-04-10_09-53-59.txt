@@ -1,0 +1,125 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
+Hardware: Inspiron 7348
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x09 hdr=0x00 vendor=0x8086 device=0x1616 subvendor=0x1028 subdevice=0x0675
+        vendor     = 'Intel Corporation'
+        device     = 'Broadwell-U GT2 [HD Graphics 5500]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    iwm0@pci0:1:0:0:	class=0x028000 rev=0x59 hdr=0x00 vendor=0x8086 device=0x095a subvendor=0x8086 subdevice=0x5410
+        vendor     = 'Intel Corporation'
+        device     = 'Wireless 7265'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:3:0:	class=0x040300 rev=0x09 hdr=0x00 vendor=0x8086 device=0x160c subvendor=0x1028 subdevice=0x0675
+        vendor     = 'Intel Corporation'
+        device     = 'Broadwell-U Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:0:27:0:	class=0x040300 rev=0x03 hdr=0x00 vendor=0x8086 device=0x9ca0 subvendor=0x1028 subdevice=0x0675
+        vendor     = 'Intel Corporation'
+        device     = 'Wildcat Point-LP High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:31:2:	class=0x010601 rev=0x03 hdr=0x00 vendor=0x8086 device=0x9c83 subvendor=0x1028 subdevice=0x0675
+        vendor     = 'Intel Corporation'
+        device     = 'Wildcat Point-LP SATA Controller [AHCI Mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x03 hdr=0x00 vendor=0x8086 device=0x9cb1 subvendor=0x1028 subdevice=0x0675
+        vendor     = 'Intel Corporation'
+        device     = 'Wildcat Point-LP USB xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci0@pci0:0:29:0:	class=0x0c0320 rev=0x03 hdr=0x00 vendor=0x8086 device=0x9ca6 subvendor=0x1028 subdevice=0x0675
+        vendor     = 'Intel Corporation'
+        device     = 'Wildcat Point-LP USB EHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_dock.ko
+acpi_wmi.ko
+dmabuf.ko
+drm.ko
+hconf.ko
+hmt.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwm.ko
+ig4.ko
+iic.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+pchtherm.ko
+smbus.ko
+ttm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   61
+Model name:              Intel(R) Core(TM) i3-5010U CPU @ 2.10GHz
+Stepping:                4
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                3M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid fpcsds rdseed adx smap intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
