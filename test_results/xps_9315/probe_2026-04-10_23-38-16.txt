@@ -1,0 +1,130 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
+Hardware: XPS 9315
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x0c hdr=0x00 vendor=0x8086 device=0x46aa subvendor=0x1028 subdevice=0x0b14
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-UP4 GT2 [Iris Xe Graphics]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    iwlwifi0@pci0:0:20:3:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51f0 subvendor=0x8086 subdevice=0x4090
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-P PCH CNVi WiFi'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    none1@pci0:0:5:0:	class=0x048000 rev=0x06 hdr=0x00 vendor=0x8086 device=0x465d subvendor=0x1028 subdevice=0x0b14
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake Imaging Signal Processor'
+        class      = multimedia
+    hdac0@pci0:0:31:3:	class=0x040100 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51cc subvendor=0x1028 subdevice=0x0b14
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake Smart Sound Technology Audio Controller'
+        class      = multimedia
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:1:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x1344 device=0x5414 subvendor=0x1344 subdevice=0x1400
+        vendor     = 'Micron Technology Inc'
+        device     = '3460 NVMe SSD'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:13:0:	class=0x0c0330 rev=0x06 hdr=0x00 vendor=0x8086 device=0x461e subvendor=0x1028 subdevice=0x0b14
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-P Thunderbolt 4 USB Controller'
+        class      = serial bus
+        subclass   = USB
+    none3@pci0:0:13:2:	class=0x0c0340 rev=0x06 hdr=0x00 vendor=0x8086 device=0x463e subvendor=0x1028 subdevice=0x0b14
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-P Thunderbolt 4 NHI'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:0:20:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ed subvendor=0x1028 subdevice=0x0b14
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake PCH USB 3.2 xHCI Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+dmabuf.ko
+drm.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+smbus.ko
+ttm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            12
+Thread(s) per core:      2
+Core(s) per socket:      6
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   154
+Model name:              12th Gen Intel(R) Core(TM) i7-1250U
+Stepping:                4
+L1d cache:               48K
+L1i cache:               32K
+L2 cache:                1280K
+L3 cache:                12M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust bmi1 avx2 fp_dp smep bmi2 erms invpcid fpcsds rdseed adx smap clflushopt clwb intel_pt umip pku ospke syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
