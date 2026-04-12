@@ -43,3 +43,4 @@ Tested fixes:
 - ZFS tuning options
 
 Issue still present.
+Controller: Intel ICH9M SATA AHCI
