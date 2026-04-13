@@ -1,0 +1,113 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
+Hardware: 83HN
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:98:0:0:	class=0x038000 rev=0xc4 hdr=0x00 vendor=0x1002 device=0x150e subvendor=0x17aa subdevice=0x3815
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Strix [Radeon 880M / 890M]'
+        class      = display
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: FAILED
+    none3@pci0:97:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x14c3 device=0x0616 subvendor=0x17aa subdevice=0xe0c6
+        vendor     = 'MEDIATEK Corp.'
+        device     = 'MT7922 802.11ax PCI Express Wireless Network Adapter'
+        class      = network
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:98:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0x17aa subdevice=0x3846
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Radeon High Definition Audio Controller [Rembrandt/Strix]'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:98:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x38a7
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Family 17h/19h/1ah HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:96:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x1c5c device=0x1f69 subvendor=0x1c5c subdevice=0x1f69
+        vendor     = 'SK hynix'
+        device     = 'PVC10 NVMe Solid State Drive (DRAM-less)'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:98:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x151e subvendor=0x1022 subdevice=0x151e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:100:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x151f subvendor=0x1022 subdevice=0x151f
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci2@pci0:100:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x151a subvendor=0x1022 subdevice=0x151a
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci3@pci0:100:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x151b subvendor=0x1022 subdevice=0x151b
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    none8@pci0:100:0:5:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x1022 device=0x151c subvendor=0x1022 subdevice=0x151c
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'USB4 Router 0'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            20
+Thread(s) per core:      2
+Core(s) per socket:      10
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              26
+Model:                   36
+Model name:              AMD Ryzen AI 9 365 w/ Radeon 880M              
+Stepping:                0
+L1d cache:               48K
+L1i cache:               32K
+L2 cache:                1024K
+L3 cache:                8M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
