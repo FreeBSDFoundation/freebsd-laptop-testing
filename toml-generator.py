@@ -4,11 +4,10 @@ import glob
 import os
 
 COLUMNS = ["Graphics", "Networking", "Audio", "USB Ports"]
-
+REPO_URL = "https://github.com/FreeBSDFoundation/freebsd-laptop-testing/tree/main"
 
 def format_score(value):
     return int(value) if value % 1 == 0 else value
-
 
 def parse_file(path):
     with open(path) as f:
@@ -47,12 +46,17 @@ def parse_file(path):
                 total_earned += earned
                 total_possible += possible
 
+    comments_file = os.path.join(os.path.dirname(path), "comments.md")
+    comments_link = f"{REPO_URL}/{comments_file}" if os.path.exists(comments_file) else ""
+
     return {
         "model": model,
         "overall_score": f"{format_score(total_earned)}/{format_score(total_possible)}",
         "category_scores": scores,
         "details": data,
-        "file_path": path
+        "file_path": path,
+        "probe_url": f"{REPO_URL}/{path}",
+        "comments_link": comments_link
     }
 
 def generate_manual_toml():
@@ -64,6 +68,10 @@ def generate_manual_toml():
             print(f'model = "{p["model"]}"')
             print(f'overall_score = "{p["overall_score"]}"')
             print(f'file_path = "{p["file_path"]}"')
+            print(f'probe_url = "{p["probe_url"]}"')
+            if p["comments_link"]:
+                print(f'comments_link = "{p["comments_link"]}"')
+
             print(f"\n[laptops.category_scores]")
             for cat, score in p["category_scores"].items():
                 print(f'"{cat}" = "{score}"')
@@ -73,11 +81,7 @@ def generate_manual_toml():
                 print(f'"{cat}" = [{device_list}]')
 
         except Exception as e:
-            #print to stderr so that stdout toml output doesn't get interrupted
-            import sys
             print(f"Error parsing {filepath}: {e}", file=sys.stderr)
-
 
 if __name__ == "__main__":
     generate_manual_toml()
-
