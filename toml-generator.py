@@ -52,10 +52,8 @@ def parse_file(path):
 
     return {
         "model": model,
-        "overall_score": format_score(total_earned),
         "category_scores": scores,
         "details": data,
-        "file_path": path,
         "probe_url": f"{REPO_URL}/{path}",
         "comments_link": comments_link
     }
@@ -67,8 +65,6 @@ def generate_manual_toml():
             p = parse_file(filepath)
             print(f"\n[[laptops]]")
             print(f'model = "{p["model"]}"')
-            print(f'overall_score = {p["overall_score"]}') # No quotes = number
-            print(f'file_path = "{p["file_path"]}"')
             print(f'probe_url = "{p["probe_url"]}"')
             if p["comments_link"]:
                 print(f'comments_link = "{p["comments_link"]}"')
