@@ -15,7 +15,7 @@ def parse_file(path):
 
     model = "Unknown Hardware"
     data = {c: [] for c in COLUMNS}
-    scores = {c: "0/0" for c in COLUMNS}
+    scores = {c: 0 for c in COLUMNS}
     total_earned = 0.0
     total_possible = 0.0
     current_section = None
@@ -42,7 +42,8 @@ def parse_file(path):
             if m_score:
                 earned = float(m_score.group(1))
                 possible = float(m_score.group(2))
-                scores[current_section] = f"{format_score(earned)}/{format_score(possible)}"
+                # Store only the earned value as a formatted number
+                scores[current_section] = format_score(earned)
                 total_earned += earned
                 total_possible += possible
 
@@ -51,7 +52,7 @@ def parse_file(path):
 
     return {
         "model": model,
-        "overall_score": f"{format_score(total_earned)}/{format_score(total_possible)}",
+        "overall_score": format_score(total_earned),
         "category_scores": scores,
         "details": data,
         "file_path": path,
@@ -66,19 +67,22 @@ def generate_manual_toml():
             p = parse_file(filepath)
             print(f"\n[[laptops]]")
             print(f'model = "{p["model"]}"')
-            print(f'overall_score = "{p["overall_score"]}"')
+            print(f'overall_score = {p["overall_score"]}') # No quotes = number
             print(f'file_path = "{p["file_path"]}"')
             print(f'probe_url = "{p["probe_url"]}"')
             if p["comments_link"]:
                 print(f'comments_link = "{p["comments_link"]}"')
 
-            print(f"\n[laptops.category_scores]")
+            # Flattened Scores
             for cat, score in p["category_scores"].items():
-                print(f'"{cat}" = "{score}"')
-            print(f"\n[laptops.details]")
+                key = cat.lower().replace(" ", "_")
+                print(f'{key}_score = {score}')
+
+            # Flattened Details
             for cat, devices in p["details"].items():
+                key = cat.lower().replace(" ", "_")
                 device_list = ", ".join([f'"{d}"' for d in devices])
-                print(f'"{cat}" = [{device_list}]')
+                print(f'{key}_devices = [{device_list}]')
 
         except Exception as e:
             print(f"Error parsing {filepath}: {e}", file=sys.stderr)
