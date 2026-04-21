@@ -1,0 +1,141 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 releng/15.0-n281018-0730d5233286 GENERIC
+Hardware: 20W0004DMH
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a49 subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'TigerLake-LP GT2 [Iris Xe Graphics]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    em0@pci0:0:31:6:	class=0x020000 rev=0x20 hdr=0x00 vendor=0x8086 device=0x15fc subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'Ethernet Connection (13) I219-V'
+        class      = network
+  Device 2 Status: WORKS
+    iwlwifi0@pci0:9:0:0:	class=0x028000 rev=0x1a hdr=0x00 vendor=0x8086 device=0x2725 subvendor=0x8086 subdevice=0x0020
+        vendor     = 'Intel Corporation'
+        device     = 'Wi-Fi 6E(802.11ax) AX210/AX1675* 2x2 [Typhoon Peak]'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040380 rev=0x20 hdr=0x00 vendor=0x8086 device=0xa0c8 subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'Tiger Lake-LP Smart Sound Technology Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:4:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x1c5c device=0x174a subvendor=0x1c5c subdevice=0x174a
+        vendor     = 'SK hynix'
+        device     = 'Gold P31/BC711/PC711 NVMe Solid State Drive'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:13:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a13 subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'Tiger Lake-LP Thunderbolt 4 USB Controller'
+        class      = serial bus
+        subclass   = USB
+    none1@pci0:0:13:2:	class=0x0c0340 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a1b subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'Tiger Lake-LP Thunderbolt 4 NHI'
+        class      = serial bus
+        subclass   = USB
+    none2@pci0:0:13:3:	class=0x0c0340 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a1d subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'Tiger Lake-LP Thunderbolt 4 NHI'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:0:20:0:	class=0x0c0330 rev=0x20 hdr=0x00 vendor=0x8086 device=0xa0ed subvendor=0x17aa subdevice=0x22c9
+        vendor     = 'Intel Corporation'
+        device     = 'Tiger Lake-LP USB 3.2 Gen 2x1 xHCI Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+coretemp.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fusefs.ko
+geom_eli.ko
+i915kms.ko
+ichsmb.ko
+if_infiniband.ko
+if_iwlwifi.ko
+if_iwx.ko
+if_lagg.ko
+if_wg.ko
+iic.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+nullfs.ko
+pf.ko
+smbus.ko
+ttm.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   140
+Model name:              11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+Stepping:                1
+L1d cache:               48K
+L1i cache:               32K
+L2 cache:                1280K
+L3 cache:                8M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust bmi1 avx2 fp_dp smep bmi2 erms invpcid fpcsds pqe pat pse36 rdseed adx smap clflushopt clwb intel_pt sha umip pku ospke syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
