@@ -1,0 +1,119 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p6 releng/15.0-n281024-6b6bc9afa0b0 GENERIC
+Hardware: Surface Book
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x07 hdr=0x00 vendor=0x8086 device=0x1916 subvendor=0x1414 subdevice=0x0014
+        vendor     = 'Intel Corporation'
+        device     = 'Skylake-U GT2 [HD Graphics 520]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: FAILED
+    none6@pci0:3:0:0:	class=0x020000 rev=0x00 hdr=0x00 vendor=0x11ab device=0x2b38 subvendor=0x0004 subdevice=0x045e
+        vendor     = 'Marvell Technology Group Ltd.'
+        device     = '88W8897 [AVASTAR] 802.11ac Wireless'
+        class      = network
+
+  Category Total Score: 0/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040380 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d70 subvendor=0x8086 subdevice=0x7270
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP HD Audio'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:2:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x144d device=0xa802 subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller SM951/PM951'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x8086 subdevice=0x7270
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+dmabuf.ko
+drm.ko
+fdescfs.ko
+geom_eli.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+i915kms.ko
+if_axge.ko
+ig4.ko
+iic.ko
+iichid.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mqueuefs.ko
+pchtherm.ko
+pty.ko
+ttm.ko
+uether.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   78
+Model name:              Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz
+Stepping:                3
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                4M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 hle avx2 smep bmi2 erms invpcid rtm fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
