@@ -18,3 +18,4 @@ haven't test VMs
 
 because I'm a bit lazy I haven't tested ethernet or usb-tethering
 
+when suspending I see TTY for a bit then it disappears
