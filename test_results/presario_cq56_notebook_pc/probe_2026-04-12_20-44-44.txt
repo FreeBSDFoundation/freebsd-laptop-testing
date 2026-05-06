@@ -50,7 +50,7 @@ Hardware: Presario CQ56 Notebook PC
         device     = '82801IBM/IEM (ICH9M/ICH9M-E) 4 port SATA Controller [AHCI mode]'
         class      = mass storage
 
-  Category Total Score: 2/2
+  Category Total Score: 0.75/2
 
 --------------------
 
