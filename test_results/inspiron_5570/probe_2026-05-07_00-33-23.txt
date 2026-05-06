@@ -1,0 +1,149 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p5 n230754-3148d599a88b GENERIC
+Hardware: Inspiron 5570
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x07 hdr=0x00 vendor=0x8086 device=0x5917 subvendor=0x1028 subdevice=0x0810
+        vendor     = 'Intel Corporation'
+        device     = 'Kaby Lake-R GT2 [UHD Graphics 620]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    re0@pci0:2:0:0:	class=0x020000 rev=0x07 hdr=0x00 vendor=0x10ec device=0x8136 subvendor=0x1028 subdevice=0x0810
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL810xE PCI Express Fast Ethernet controller'
+        class      = network
+  Device 2 Status: WORKS
+    iwm0@pci0:3:0:0:	class=0x028000 rev=0x79 hdr=0x00 vendor=0x8086 device=0x3165 subvendor=0x8086 subdevice=0x4410
+        vendor     = 'Intel Corporation'
+        device     = 'Wireless 3165'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d71 subvendor=0x1028 subdevice=0x0810
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP HD Audio'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:23:0:	class=0x010601 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d03 subvendor=0x1028 subdevice=0x0810
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP SATA Controller [AHCI mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x1028 subdevice=0x0810
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_topaz_ce_bin.ko
+amdgpu_topaz_mc_bin.ko
+amdgpu_topaz_me_bin.ko
+amdgpu_topaz_mec_bin.ko
+amdgpu_topaz_pfp_bin.ko
+amdgpu_topaz_rlc_bin.ko
+amdgpu_topaz_sdma1_bin.ko
+amdgpu_topaz_sdma_bin.ko
+amdgpu_topaz_smc_bin.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+fusefs.ko
+geom_eli.ko
+hconf.ko
+hcons.ko
+hgame.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hsctrl.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwm.ko
+ig4.ko
+iic.ko
+iichid.ko
+ipfw.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+pchtherm.ko
+pty.ko
+smbus.ko
+ttm.ko
+ucom.ko
+umodem.ko
+utouch.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   142
+Model name:              Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+Stepping:                10
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                6M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 avx2 smep bmi2 erms invpcid fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
