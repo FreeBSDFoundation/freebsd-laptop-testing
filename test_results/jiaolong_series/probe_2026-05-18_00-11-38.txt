@@ -1,7 +1,7 @@
 === FreeBSD Hardware Status Info ===
 
 Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
-Hardware: JIAOLONG Series
+Hardware: mechrevo JIAOLONG 16 Series 2025(orange)
 ------------------------------------
 
 - Graphics
