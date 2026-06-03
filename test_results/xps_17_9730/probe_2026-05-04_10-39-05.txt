@@ -1,0 +1,144 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
+Hardware: XPS 17 9730
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci1@pci0:0:2:0:	class=0x030000 rev=0x04 hdr=0x00 vendor=0x8086 device=0xa7a0 subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P [Iris Xe Graphics]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    iwlwifi0@pci0:0:20:3:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51f1 subvendor=0x8086 subdevice=0x4090
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake PCH CNVi WiFi'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040100 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ca subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P/U/H cAVS'
+        class      = multimedia
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    pcib6@pci0:0:14:0:	class=0x010400 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa77f subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Volume Management Device NVMe RAID Controller Intel Corporation'
+        class      = mass storage
+  Device 2 Status: DETECTED
+    nvme0@pci65529:225:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x15b7 device=0x5011 subvendor=0x15b7 subdevice=0x5011
+        vendor     = 'Sandisk Corp'
+        device     = 'WD PC SN810 / Black SN850 NVMe SSD'
+        class      = mass storage
+  Device 3 Status: DETECTED
+    nvme1@pci65529:226:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa80d subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller PM9C1a (DRAM-less)'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:13:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa71e subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P Thunderbolt 4 USB Controller'
+        class      = serial bus
+        subclass   = USB
+    none4@pci0:0:13:2:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa73e subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P Thunderbolt 4 NHI'
+        class      = serial bus
+        subclass   = USB
+    none5@pci0:0:13:3:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x8086 device=0xa76d subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Raptor Lake-P Thunderbolt 4 NHI'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:0:20:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ed subvendor=0x1028 subdevice=0x0bda
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake PCH USB 3.2 xHCI Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+dmabuf.ko
+drm.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+lindebugfs.ko
+linux.ko
+linux_common.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+nvidia.ko
+rtsx.ko
+smbus.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            20
+Thread(s) per core:      2
+Core(s) per socket:      10
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   186
+Model name:              13th Gen Intel(R) Core(TM) i9-13900H
+Stepping:                2
+L1d cache:               48K
+L1i cache:               32K
+L2 cache:                1280K
+L3 cache:                24M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust bmi1 avx2 fp_dp smep bmi2 erms invpcid fpcsds rdseed adx smap clflushopt clwb intel_pt umip pku ospke syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
