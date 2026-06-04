@@ -1,0 +1,124 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-STABLE stable/15-n282457-b642867c2cc7 GENERIC
+Hardware: Dell System XPS L702X
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci1@pci0:0:2:0:	class=0x030000 rev=0x09 hdr=0x00 vendor=0x8086 device=0x0116 subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'Intel Corporation'
+        device     = '2nd Generation Core Processor Family Integrated Graphics Controller'
+        class      = display
+        subclass   = VGA
+  Device 2 Status: DETECTED
+    vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0dcd subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'NVIDIA Corporation'
+        device     = 'GF106M [GeForce GT 555M]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    iwn0@pci0:3:0:0:	class=0x028000 rev=0x34 hdr=0x00 vendor=0x8086 device=0x0091 subvendor=0x8086 subdevice=0x5221
+        vendor     = 'Intel Corporation'
+        device     = 'Centrino Advanced-N 6230 [Rainbow Peak]'
+        class      = network
+  Device 2 Status: WORKS
+    re0@pci0:10:0:0:	class=0x020000 rev=0x06 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:27:0:	class=0x040300 rev=0x05 hdr=0x00 vendor=0x8086 device=0x1c20 subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'Intel Corporation'
+        device     = '6 Series/C200 Series Chipset Family High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:31:2:	class=0x010601 rev=0x05 hdr=0x00 vendor=0x8086 device=0x1c03 subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'Intel Corporation'
+        device     = '6 Series/C200 Series Chipset Family 6 port Mobile SATA AHCI Controller'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    ehci0@pci0:0:26:0:	class=0x0c0320 rev=0x05 hdr=0x00 vendor=0x8086 device=0x1c2d subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'Intel Corporation'
+        device     = '6 Series/C200 Series Chipset Family USB Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci1@pci0:0:29:0:	class=0x0c0320 rev=0x05 hdr=0x00 vendor=0x8086 device=0x1c26 subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'Intel Corporation'
+        device     = '6 Series/C200 Series Chipset Family USB Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci0@pci0:4:0:0:	class=0x0c0330 rev=0x04 hdr=0x00 vendor=0x1033 device=0x0194 subvendor=0x1028 subdevice=0x04b8
+        vendor     = 'NEC Corporation'
+        device     = 'uPD720200 USB 3.0 Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+ichsmb.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+smbus.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   42
+Model name:              Intel(R) Core(TM) i7-2630QM CPU @ 2.00GHz
+Stepping:                7
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                6M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline xsave osxsave avx syscall nx rdtscp lm lahf_lm
+
+====================================

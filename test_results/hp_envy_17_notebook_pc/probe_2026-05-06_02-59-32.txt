@@ -1,0 +1,135 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-BETA1 releng/15.1-n283455-58777180c5b0 GENERIC
+Hardware: HP ENVY 17 Notebook PC
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:1:0:0:	class=0x030000 rev=0x00 hdr=0x00 vendor=0x1002 device=0x68a1 subvendor=0x103c subdevice=0x144d
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Broadway PRO [Mobility Radeon HD 5850]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    bwn_pci0@pci0:2:0:0:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x14e4 device=0x4353 subvendor=0x103c subdevice=0x1509
+        vendor     = 'Broadcom Inc. and subsidiaries'
+        device     = 'BCM43224 802.11a/b/g/n'
+        class      = network
+  Device 2 Status: DETECTED
+    re0@pci0:3:0:0:	class=0x020000 rev=0x03 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x103c subdevice=0x144d
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac1@pci0:0:27:0:	class=0x040300 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b56 subvendor=0x103c subdevice=0x144d
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset High Definition Audio'
+        class      = multimedia
+        subclass   = HDA
+    hdac0@pci0:1:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0xaa58 subvendor=0x103c subdevice=0x144d
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Juniper HDMI Audio [Radeon HD 5700 Series]'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:31:2:	class=0x010601 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b29 subvendor=0x103c subdevice=0x144d
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset 4 port SATA AHCI Controller'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    ehci0@pci0:0:26:0:	class=0x0c0320 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b3c subvendor=0x103c subdevice=0x144d
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset USB2 Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci1@pci0:0:29:0:	class=0x0c0320 rev=0x05 hdr=0x00 vendor=0x8086 device=0x3b34 subvendor=0x103c subdevice=0x144d
+        vendor     = 'Intel Corporation'
+        device     = '5 Series/3400 Series Chipset USB2 Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+    xhci0@pci0:4:0:0:	class=0x0c0330 rev=0x03 hdr=0x00 vendor=0x1033 device=0x0194 subvendor=0x103c subdevice=0x144d
+        vendor     = 'NEC Corporation'
+        device     = 'uPD720200 USB 3.0 Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+bcma.ko
+bcma_bhndb.ko
+bhnd.ko
+bhnd_pci.ko
+bhnd_pci_hostb.ko
+bhndb.ko
+bhndb_pci.ko
+gpiobus.ko
+hidmap.ko
+hms.ko
+ichsmb.ko
+if_bwn.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+siba.ko
+siba_bhndb.ko
+smbus.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   30
+Model name:              Intel(R) Core(TM) i7 CPU       Q 720  @ 1.60GHz
+Stepping:                5
+L1d cache:               32K
+L1i cache:               32K
+L3 cache:                6M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt syscall nx rdtscp lm lahf_lm
+
+====================================
