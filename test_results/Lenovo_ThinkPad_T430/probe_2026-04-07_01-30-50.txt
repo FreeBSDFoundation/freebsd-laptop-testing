@@ -1,0 +1,115 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
+Hardware: Lenovo ThinkPad T430
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x09 hdr=0x00 vendor=0x8086 device=0x0166 subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '3rd Gen Core processor Graphics Controller'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    em0@pci0:0:25:0:	class=0x020000 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1502 subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '82579LM Gigabit Network Connection (Lewisville)'
+        class      = network
+  Device 2 Status: DETECTED
+    iwn0@pci0:3:0:0:	class=0x028000 rev=0xc4 hdr=0x00 vendor=0x8086 device=0x0891 subvendor=0x8086 subdevice=0x4222
+        vendor     = 'Intel Corporation'
+        device     = 'Centrino Wireless-N 2200'
+        class      = network
+
+  Category Total Score: 4/4
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:27:0:	class=0x040300 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e20 subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '7 Series/C216 Chipset Family High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:31:2:	class=0x010601 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e03 subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '7 Series Chipset Family 6-port SATA Controller [AHCI mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e31 subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '7 Series/C210 Series Chipset Family USB xHCI Host Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci0@pci0:0:26:0:	class=0x0c0320 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e2d subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '7 Series/C216 Chipset Family USB Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+    ehci1@pci0:0:29:0:	class=0x0c0320 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e26 subvendor=0x17aa subdevice=0x21f3
+        vendor     = 'Intel Corporation'
+        device     = '7 Series/C216 Chipset Family USB Enhanced Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hsctrl.ko
+ichsmb.ko
+smbus.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   58
+Model name:              Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+Stepping:                9
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                3M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase smep erms syscall nx rdtscp lm lahf_lm
+
+====================================
