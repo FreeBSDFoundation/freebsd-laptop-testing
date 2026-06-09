@@ -1,0 +1,160 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE releng/15.0-n280995-7aedc8de6446 GENERIC
+Hardware: Mechrevo JIAOLONG Dragon 16 Pro 2025
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x2d19 subvendor=0x1d05 subdevice=0x605c
+        vendor     = 'NVIDIA Corporation'
+        device     = 'GB206M [GeForce RTX 5060 Max-Q / Mobile]'
+        class      = display
+        subclass   = VGA
+  Device 2 Status: FAILED
+    vgapci1@pci0:5:0:0:	class=0x030000 rev=0xd8 hdr=0x00 vendor=0x1002 device=0x164e subvendor=0x1d05 subdevice=0x5005
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Raphael'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 1/2
+
+--------------------
+
+- Networking
+  Device 1 Status: FAILED
+    ppt0@pci0:2:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x14c3 device=0x7922 subvendor=0x1a3b subdevice=0x5911
+        vendor     = 'MEDIATEK Corp.'
+        device     = 'MT7922 802.11ax PCI Express Wireless Network Adapter'
+        class      = network
+  Device 2 Status: DETECTED
+    none0@pci0:4:0:0:	class=0x020000 rev=0x05 hdr=0x00 vendor=0x10ec device=0x8125 subvendor=0x1d05 subdevice=0x7013
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8125 2.5GbE Controller'
+        class      = network
+
+  Category Total Score: 1/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:1:0:1:	class=0x040300 rev=0xa1 hdr=0x00 vendor=0x10de device=0x22eb subvendor=0x10de subdevice=0x0000
+        vendor     = 'NVIDIA Corporation'
+        device     = 'GB206 High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:5:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0x1d05 subdevice=0x5005
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Radeon High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac2@pci0:5:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x1d05 subdevice=0x3010
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:3:0:0:	class=0x010802 rev=0x03 hdr=0x00 vendor=0x1e49 device=0x1081 subvendor=0x1e49 subdevice=0x1081
+        vendor     = 'Yangtze Memory Technologies Co.,Ltd'
+        device     = 'PC41Q M.2 2280 NVMe SSD (DRAM-less)'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:5:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b6 subvendor=0x1d05 subdevice=0x5005
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raphael/Granite Ridge USB 3.1 xHCI'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:5:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b7 subvendor=0x1d05 subdevice=0x5005
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raphael/Granite Ridge USB 3.1 xHCI'
+        class      = serial bus
+        subclass   = USB
+    xhci2@pci0:6:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b8 subvendor=0x1d05 subdevice=0x5005
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raphael/Granite Ridge USB 2.0 xHCI'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+amdsmn.ko
+amdtemp.ko
+bridgestp.ko
+fdescfs.ko
+fusefs.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_bridge.ko
+if_urndis.ko
+ig4.ko
+iichid.ko
+intpm.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nlsysevent.ko
+nmdm.ko
+nvidia-modeset.ko
+nvidia.ko
+pty.ko
+smbus.ko
+uether.ko
+vmm.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            32
+Thread(s) per core:      2
+Core(s) per socket:      16
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              25
+Model:                   97
+Model name:              AMD Ryzen 9 8940HX with Radeon Graphics        
+Stepping:                2
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                1024K
+L3 cache:                64M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
