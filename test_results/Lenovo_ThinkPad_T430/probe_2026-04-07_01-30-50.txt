@@ -28,7 +28,7 @@ Hardware: Lenovo ThinkPad T430
         device     = 'Centrino Wireless-N 2200'
         class      = network
 
-  Category Total Score: 4/4
+  Category Total Score: 2/2 
 
 --------------------
 
