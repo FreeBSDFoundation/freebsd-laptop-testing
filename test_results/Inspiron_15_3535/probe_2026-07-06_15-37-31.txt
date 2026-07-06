@@ -1,0 +1,138 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.0-RELEASE-p10 GENERIC
+Hardware: Inspiron 15 3535
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:3:0:0:	class=0x030000 rev=0xc1 hdr=0x00 vendor=0x1002 device=0x1506 subvendor=0x1028 subdevice=0x0c3e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Mendocino [Radeon 610M]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    rtw880@pci0:2:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x10ec device=0xc821 subvendor=0x10ec subdevice=0xc828
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8821CE 802.11ac PCIe Wireless Network Adapter'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:3:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0x1028 subdevice=0x0c3e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Radeon High Definition Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:3:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x1028 subdevice=0x0c3e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Ryzen HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:1:0:0:	class=0x010802 rev=0x03 hdr=0x00 vendor=0x025e device=0xf1ab subvendor=0x025e subdevice=0x3910
+        vendor     = 'Solidigm'
+        device     = 'P41 Plus NVMe SSD (DRAM-less) [Echo Harbor]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:3:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1503 subvendor=0x1028 subdevice=0x0c3e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:3:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1504 subvendor=0x1028 subdevice=0x0c3e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+    xhci2@pci0:4:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x1505 subvendor=0x1028 subdevice=0x0c3e
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_dcn_3_1_6_dmcub_bin.ko
+amdgpu_gc_10_3_7_ce_bin.ko
+amdgpu_gc_10_3_7_me_bin.ko
+amdgpu_gc_10_3_7_mec2_bin.ko
+amdgpu_gc_10_3_7_mec_bin.ko
+amdgpu_gc_10_3_7_pfp_bin.ko
+amdgpu_gc_10_3_7_rlc_bin.ko
+amdgpu_psp_13_0_8_ta_bin.ko
+amdgpu_psp_13_0_8_toc_bin.ko
+amdgpu_sdma_5_2_7_bin.ko
+amdgpu_yellow_carp_vcn_bin.ko
+dmabuf.ko
+drm.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_rtw88.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+smbus.ko
+ttm.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              23
+Model:                   160
+Model name:              AMD Ryzen 5 7520U with Radeon Graphics         
+Stepping:                0
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                512K
+L3 cache:                4M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
