@@ -1,12 +1,12 @@
-name: Generate site on merge 
+name: Generate site on merge
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: read
       pages: write
@@ -21,9 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: Build site
-        run: |
-          chmod +x ./build.sh
-          ./build.sh
+        run: /bin/sh build.sh
         env:
           REPO_CONTEXT: ${{ github.repository }}
           BRANCH_NAME: ${{ github.ref_name }}
