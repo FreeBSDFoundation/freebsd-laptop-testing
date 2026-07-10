@@ -76,7 +76,7 @@ Hardware: Lenovo ThinkBook G6
 
 - Bluetooth
   Status: NOT DETECTED
-  Category Total Score: 0/0
+  Category Total Score: 0/2
 
 --------------------
 

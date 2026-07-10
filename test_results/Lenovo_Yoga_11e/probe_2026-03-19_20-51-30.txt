@@ -67,7 +67,7 @@ Hardware: Lenovo Yoga 11e
 
 - Bluetooth
   Status: NOT DETECTED
-  Category Total Score: 0/0
+  Category Total Score: 0/2
 
 --------------------
 

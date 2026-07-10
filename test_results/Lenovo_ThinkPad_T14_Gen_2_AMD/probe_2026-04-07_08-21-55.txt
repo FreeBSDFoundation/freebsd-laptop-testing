@@ -82,7 +82,7 @@ Hardware: Lenovo ThinkPad T14 Gen 2 (AMD)
 
 - Bluetooth
   Status: NOT DETECTED
-  Category Total Score: 0/0
+  Category Total Score: 0/2
 
 --------------------
 

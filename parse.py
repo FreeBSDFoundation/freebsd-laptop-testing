@@ -9,7 +9,7 @@ import glob
 from html import escape
 import os
 
-COLUMNS = ["Graphics", "Networking", "Audio", "USB Ports"]
+COLUMNS = ["Graphics", "Networking", "Audio", "USB Ports", "Bluetooth"]
 
 
 def format_score(value):
@@ -23,20 +23,17 @@ def get_rows():
             model, ranking, _, _ = parse_file(filepath)
             if model and "/" in ranking:
                 parts = ranking.split('/')
-                earned = float(parts[0])
-                possible = float(parts[1])
-
-                # Filter specifically for 8/8 scores
-                if earned == 8 and possible == 8:
-                    data_list.append({
-                        "name": model,
-                        "score_str": ranking
-                    })
+                data_list.append({
+                    "name": model,
+                    "earned": parts[0],
+                    "possible": parts[1]
+                })
         except Exception:
             continue
 
-    for item in data_list[:10]:
-        print(f"<tr><td>{escape(item['name'])}</td><td>{item['score_str']}</td></tr>")
+    max_score = max(data_list, key=lambda i: float(i['earned']))['earned']
+    for item in list(filter(lambda i: i['earned'] == max_score, data_list))[:10]:
+        print(f"<tr><td>{escape(item['name'])}</td><td>{item['earned']}/{item['possible']}</td></tr>")
 
 
 def parse_file(path):

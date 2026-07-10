@@ -88,7 +88,7 @@ Hardware: Framework Laptop 13 (AMD Ryzen 7040 Series)
 
 - Bluetooth
   Status: NOT DETECTED
-  Category Total Score: 0/0
+  Category Total Score: 0/2
 
 --------------------
 
