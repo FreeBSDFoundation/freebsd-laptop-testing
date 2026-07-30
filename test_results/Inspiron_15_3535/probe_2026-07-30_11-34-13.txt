@@ -1,0 +1,89 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: "FreeBSD 15.1-RELEASE-p1 #0 -dirty"
+Hardware: "Inspiron_15_3535"
+CPU: AMD Ryzen 5 7520U with Radeon Graphics         
+------------------------------------
+
+- Graphics
+vgapci0@pci0:3:0:0:	class=0x030000 rev=0xc1 hdr=0x00 vendor=0x1002 device=0x1506 subvendor=0x1028 subdevice=0x0c3e
+    vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+    device     = 'Mendocino [Radeon 610M]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+rtw880@pci0:2:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x10ec device=0xc821 subvendor=0x10ec subdevice=0xc828
+    vendor     = 'Realtek Semiconductor Co., Ltd.'
+    device     = 'RTL8821CE 802.11ac PCIe Wireless Network Adapter'
+    class      = network
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Storage
+nvme0@pci0:1:0:0:	class=0x010802 rev=0x03 hdr=0x00 vendor=0x025e device=0xf1ab subvendor=0x025e subdevice=0x3910
+    vendor     = 'Solidigm'
+    device     = 'P41 Plus NVMe SSD (DRAM-less) [Echo Harbor]'
+    class      = mass storage
+    subclass   = NVM
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Bluetooth
+
+ugen1.2: <Bluetooth Radio Realtek Semiconductor Corp.> at usbus1, cfg=0 md=HOST spd=FULL (12Mbps) pwr=ON (500mA)
+  bDeviceClass = 0x00e0  <Wireless controller>
+  bDeviceSubClass = 0x0001 
+  iManufacturer = 0x0001  <Realtek >
+  iProduct = 0x0002  <Bluetooth Radio >
+  device = 'Bluetooth Radio Realtek Semiconductor Corp.'
+
+  Category Total Score: 0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_rtw88.ko
+ig4.ko
+iichid.ko
+intpm.ko
+kernel
+lindebugfs.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+smbus.ko
+
+====================================

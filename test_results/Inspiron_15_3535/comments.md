@@ -3,7 +3,7 @@
 rtw88 has always been a pain since installing [my laptop](probe_2026-07-06_15-37-31.txt) on FreeBSD 14.2.
 * 14.2, 14.3, 15.0: was never able to finish an rsync LAN backup: something freezes wlan0, trying to ifconfig it down doesn't even return. Only a reboot resolves.
 * 14.2 and 14.3 were relatively quick to catch an AP; 15.0 regressed, with sometimes dozens of minutes before getting authenticated. The more APs there are all around, the slowest it succeeds (at home with 2 or 3 APs it can take as "low" as 2 minutes before being connected). It may have to do with the "6 s delay" that is identified as a (still unresolved) weakness of rtw88 and rtw89.
-  15.1: even at home with 2 APs, unable to catch one in over 30 mn
+  15.1 (p1): even at home with 2 APs, unable to catch one in over 3 hours
 * 14.2 and 14.3 (maybe 15.0?) still needed `compat.linuxkpi.skb.mem_limit=1` in `/boot/loader.conf`. Removing it went from stable 2 MB/s transfer rates to unstable rates, from stalled to max 600 KB/s.
 
 Waiting for Bjoern A. Zeeb's great efforts on net80211 (e.g. [status report from June](https://github.com/FreeBSDFoundation/status-updates/blob/main/Bjoern_Zeeb/2026-06.md#misc)).
