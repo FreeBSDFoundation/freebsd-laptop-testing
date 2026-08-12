@@ -84,7 +84,7 @@ ugen1.2: <Bluetooth Radio Realtek Semiconductor Corp.> at usbus1, cfg=0 md=HOST 
   iProduct = 0x0002  <Bluetooth Radio >
   device = 'Bluetooth Radio Realtek Semiconductor Corp.'
 
-  Category Total Score: 0.0/2.0
+  Category Total Score: 2.0/2.0
 
 --------------------
 
@@ -121,7 +121,10 @@ linuxkpi_video.ko
 mac_ntpd.ko
 netgraph.ko
 ng_bluetooth.ko
+ng_btsocket.ko
 ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
 ng_ubt.ko
 nlsysevent.ko
 smbus.ko

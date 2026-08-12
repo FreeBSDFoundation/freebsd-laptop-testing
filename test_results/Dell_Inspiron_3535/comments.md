@@ -8,6 +8,12 @@ rtw88 has always been a pain since installing [my laptop](probe_2026-07-06_15-37
 
 Waiting for Bjoern A. Zeeb's great efforts on net80211 (e.g. [status report from June](https://github.com/FreeBSDFoundation/status-updates/blob/main/Bjoern_Zeeb/2026-06.md#misc)).
 
+## Bluetooth
+
+Bluetooth required an explicit `pkg install rtlbt-firmware` to get detected.
+
+(other subsystems may have needed some manual install too, but their history is more convoluted so it's difficult to tell for sure, while Bluetooth was a clear "not detected before that pkg, detected after it")
+
 ## Graphics
 
 Wayfire totally usable.
