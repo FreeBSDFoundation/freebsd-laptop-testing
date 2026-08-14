@@ -1,0 +1,130 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 16.0-CURRENT #3 improved-nvme-n288039-c5b9710ddb99
+Hardware: MacBookPro13_1
+CPU: Intel(R) Core(TM) i7-6660U CPU @ 2.40GHz
+------------------------------------
+
+- Graphics
+vgapci0@pci0:0:2:0:	class=0x030000 rev=0x0a hdr=0x00 vendor=0x8086 device=0x1926 subvendor=0x106b subdevice=0x0150
+    vendor     = 'Intel Corporation'
+    device     = 'Skylake-U GT3 [Iris Graphics 540]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+brcmfmac0@pci0:2:0:0:	class=0x028000 rev=0x05 hdr=0x00 vendor=0x14e4 device=0x43a3 subvendor=0x106b subdevice=0x0159
+    vendor     = 'Broadcom Inc. and subsidiaries'
+    device     = 'BCM4350 802.11ac Wireless Network Adapter'
+    class      = network
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d70 subvendor=0x8086 subdevice=0x7270
+    vendor     = 'Intel Corporation'
+    device     = 'Sunrise Point-LP HD Audio'
+    class      = multimedia
+    subclass   = HDA
+none4@pci0:3:0:0:	class=0x048000 rev=0x00 hdr=0x00 vendor=0x14e4 device=0x1570 subvendor=0x14e4 subdevice=0x1570
+    vendor     = 'Broadcom Inc. and subsidiaries'
+    device     = '720p FaceTime HD Camera'
+    class      = multimedia
+
+  Category Total Score: 1.0/2.0
+
+--------------------
+
+- Storage
+nvme0@pci0:1:0:0:	class=0x018002 rev=0x11 hdr=0x00 vendor=0x106b device=0x2003 subvendor=0x106b subdevice=0x2003
+    vendor     = 'Apple Inc.'
+    device     = 'S3X NVMe Controller'
+    class      = mass storage
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x8086 subdevice=0x7270
+    vendor     = 'Intel Corporation'
+    device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+    class      = serial bus
+    subclass   = USB
+xhci1@pci0:7:0:0:	class=0x0c0330 rev=0x02 hdr=0x00 vendor=0x8086 device=0x15d4 subvendor=0x8086 subdevice=0x0000
+    vendor     = 'Intel Corporation'
+    device     = 'JHL6540 Thunderbolt 3 USB Controller (C step) [Alpine Ridge 4C 2016]'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Bluetooth
+
+
+
+  Category Total Score: 0.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+asmc.ko
+atopcase.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+geom_eli.ko
+hconf.ko
+hidbus.ko
+hidmap.ko
+hkbd.ko
+hms.ko
+hmt.ko
+i915kms.ko
+ichsmb.ko
+if_brcmfmac.ko
+if_ure.ko
+ig4.ko
+iic.ko
+intelspi.ko
+kernel
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux_common.ko
+linux.ko
+linux64.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+nmdm.ko
+pty.ko
+sdio.ko
+smbus.ko
+snd_uaudio.ko
+spibus.ko
+ttm.ko
+uether.ko
+uhid.ko
+ulpt.ko
+ums.ko
+usbhid.ko
+wlan_gcmp.ko
+wsp.ko
+zfs.ko
+
+====================================
