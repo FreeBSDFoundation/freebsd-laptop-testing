@@ -1,3 +1,22 @@
+## General usability
+
+### 15.1
+
+**Not usable** as of [probe\_2026-08-09\_18-25-23.txt](probe_2026-08-09_18-25-23.txt):
+* no Wi-Fi
+* no GUI (DRM + Wayland)
+* + parts not working on 15.0
+
+### 15.0
+
+**Usable** as of [probe\_2026-08-09\_17-55-39.txt](probe_2026-08-09_17-55-39.txt) except for:
+* WiFi slow to catch an AP (see [§ WiFi](#wifi))
+* no sleep! (see [§ Battery](#battery))
+
+### 14.3
+
+(like 15.0, with just a subjectively quicker WiFi authentication in environments with many APs)
+
 ## WiFi
 
 rtw88 has always been a pain since installing [my laptop](probe_2026-07-06_15-37-31.txt) on FreeBSD 14.2.
@@ -25,7 +44,8 @@ Probably memory-related (OOM kills), but wondering if there could be a bad inter
 
 ## Battery
 
-No sleep mode supported from 14.2 to 15.0.
+No sleep mode supported from 14.2 to 15.0: firmware does not support S3, S4 never wakes up, S0ix in wait for an implementation on FreeBSD.
+
 Ended up with a manual script to go low consumption: `ifconfig wlan0 down ; backlight 0 ; /etc/rc.d/power_profile 0x00 ; killall -STOP firefox`: this makes the laptop go to 2.5 - 3.5 W (as told by `acpiconf -i 0 | grep Present.rate`)
 
 ## User Experience
