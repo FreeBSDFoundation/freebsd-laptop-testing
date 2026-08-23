@@ -39,8 +39,8 @@ Wayfire totally usable.
 
 ## Browsing
 
-Heavily animated pages (e.g. LinkedIn, or blog pages with many ads flickering all over) could get the entire system to freeze. While upgrading from 14.3 to 15.0 I removed core dumps and ulimit -m 512: now only Firefox gets killed.
-Probably memory-related (OOM kills), but wondering if there could be a bad interaction with network (graphic pages generally have Javascript, but many network requests too).
+Heavily animated pages (e.g. LinkedIn, Slack, blog pages with many ads flickering all over, or even sites as simple as a highway paying portal with a few dynamically loaded panels such as "My basket", "My vehicles", "My payment means") could get the entire system to freeze. While upgrading from 14.3 to 15.0 I removed core dumps and ulimit -m 512: now only Firefox gets killed.
+Probably memory-related ("failed to reclaim memory" after one of its processes reaches a SIZE of 20 GB and a RES of more than 2 GB), but wondering if there could be a bad interaction with network (graphic pages generally have Javascript, but many network requests too).
 
 ## Battery
 
