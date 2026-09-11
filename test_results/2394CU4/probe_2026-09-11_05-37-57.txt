@@ -1,0 +1,110 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-RELEASE-p3 releng/15.1-n283611-88e7371d9dc2 GENERIC
+Hardware: 2394CU4
+CPU: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz
+------------------------------------
+
+- Graphics
+vgapci0@pci0:0:2:0:	class=0x030000 rev=0x09 hdr=0x00 vendor=0x8086 device=0x0166 subvendor=0x17aa subdevice=0x21f6
+    vendor     = 'Intel Corporation'
+    device     = 'Ivy Bridge mobile GT2 [HD Graphics 4000]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+em0@pci0:0:25:0:	class=0x020000 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1502 subvendor=0x17aa subdevice=0x21f3
+    vendor     = 'Intel Corporation'
+    device     = '82579LM Gigabit Network Connection (Lewisville)'
+    class      = network
+    subclass   = ethernet
+iwn0@pci0:3:0:0:	class=0x028000 rev=0x34 hdr=0x00 vendor=0x8086 device=0x0085 subvendor=0x8086 subdevice=0x1311
+    vendor     = 'Intel Corporation'
+    device     = 'Centrino Advanced-N 6205 [Taylor Peak]'
+    class      = network
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+hdac0@pci0:0:27:0:	class=0x040300 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e20 subvendor=0x17aa subdevice=0x21f6
+    vendor     = 'Intel Corporation'
+    device     = '7 Series/C216 Chipset Family High Definition Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Storage
+ahci0@pci0:0:31:2:	class=0x010601 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e03 subvendor=0x17aa subdevice=0x21f6
+    vendor     = 'Intel Corporation'
+    device     = '7 Series Chipset Family 6-port SATA Controller [AHCI mode]'
+    class      = mass storage
+    subclass   = SATA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e31 subvendor=0x17aa subdevice=0x21f6
+    vendor     = 'Intel Corporation'
+    device     = '7 Series/C210 Series Chipset Family USB xHCI Host Controller'
+    class      = serial bus
+    subclass   = USB
+ehci0@pci0:0:26:0:	class=0x0c0320 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e2d subvendor=0x17aa subdevice=0x21f6
+    vendor     = 'Intel Corporation'
+    device     = '7 Series/C216 Chipset Family USB Enhanced Host Controller'
+    class      = serial bus
+    subclass   = USB
+ehci1@pci0:0:29:0:	class=0x0c0320 rev=0x04 hdr=0x00 vendor=0x8086 device=0x1e26 subvendor=0x17aa subdevice=0x21f6
+    vendor     = 'Intel Corporation'
+    device     = '7 Series/C216 Chipset Family USB Enhanced Host Controller'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Bluetooth
+
+
+
+  Category Total Score: 0.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+coretemp.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+fusefs.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hsctrl.ko
+i915kms.ko
+ichsmb.ko
+iic.ko
+kernel
+lindebugfs.ko
+linuxkpi_video.ko
+nlsysevent.ko
+smbus.ko
+ttm.ko
+zfs.ko
+
+====================================
