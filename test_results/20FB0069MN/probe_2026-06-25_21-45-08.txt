@@ -1,0 +1,129 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-RELEASE releng/15.1-n283562-96841ea08dcf GENERIC
+Hardware: 20FB0069MN
+------------------------------------
+
+- Graphics
+  Device 1 Status: WORKS
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x07 hdr=0x00 vendor=0x8086 device=0x1916 subvendor=0x17aa subdevice=0x2238
+        vendor     = 'Intel Corporation'
+        device     = 'Skylake-U GT2 [HD Graphics 520]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: DETECTED
+    em0@pci0:0:31:6:	class=0x020000 rev=0x21 hdr=0x00 vendor=0x8086 device=0x1570 subvendor=0x17aa subdevice=0x2233
+        vendor     = 'Intel Corporation'
+        device     = 'Ethernet Connection I219-V'
+        class      = network
+  Device 2 Status: WORKS
+    iwm0@pci0:4:0:0:	class=0x028000 rev=0x3a hdr=0x00 vendor=0x8086 device=0x24f3 subvendor=0x8086 subdevice=0x1130
+        vendor     = 'Intel Corporation'
+        device     = 'Wireless 8260'
+        class      = network
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d70 subvendor=0x17aa subdevice=0x2238
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP HD Audio'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: WORKS
+    ahci0@pci0:0:23:0:	class=0x010601 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d03 subvendor=0x17aa subdevice=0x2238
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP SATA Controller [AHCI mode]'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x17aa subdevice=0x2238
+        vendor     = 'Intel Corporation'
+        device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwm.ko
+iic.ko
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mqueuefs.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+pchtherm.ko
+pty.ko
+rtsx.ko
+smbus.ko
+ttm.ko
+u3g.ko
+ucom.ko
+zfs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            4
+Thread(s) per core:      2
+Core(s) per socket:      2
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   78
+Model name:              Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+Stepping:                3
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                4M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust sgx bmi1 avx2 smep bmi2 erms invpcid fpcsds mpx rdseed adx smap clflushopt intel_pt syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
