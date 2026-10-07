@@ -1,0 +1,123 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 14.2-RELEASE releng/14.2-n269506-c8918d6c7412 GENERIC
+Hardware: 20MVS16C04
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:6:0:0:	class=0x030000 rev=0xd1 hdr=0x00 vendor=0x1002 device=0x15dd subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Raven Ridge [Radeon Vega Series / Radeon Vega Mobile Series]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    none3@pci0:2:0:0:	class=0x028000 rev=0x29 hdr=0x00 vendor=0x8086 device=0x2526 subvendor=0x8086 subdevice=0x0014
+        vendor     = 'Intel Corporation'
+        device     = 'Wi-Fi 5(802.11ac) Wireless-AC 9x6x [Thunder Peak]'
+        class      = network
+  Device 2 Status: WORKS
+    re0@pci0:4:0:0:	class=0x020000 rev=0x0e hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+  Device 3 Status: FAILED
+    re1@pci0:5:0:0:	class=0x020000 rev=0x10 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+  Category Total Score: 4/6
+
+--------------------
+
+- Audio
+    hdac0@pci0:6:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x15de subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+        device     = 'Raven/Raven2/Fenghuang HDMI/DP Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+    hdac1@pci0:6:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Family 17h/19h HD Audio Controller'
+        class      = multimedia
+        subclass   = HDA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    nvme0@pci0:3:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x15b7 device=0x5002 subvendor=0x15b7 subdevice=0x5002
+        vendor     = 'Sandisk Corp'
+        device     = 'SanDisk Extreme Pro / WD Black 2018/SN750/PC SN720 NVMe SSD'
+        class      = mass storage
+  Device 2 Status: DETECTED
+    ahci0@pci0:7:0:0:	class=0x010601 rev=0x61 hdr=0x00 vendor=0x1022 device=0x7901 subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'FCH SATA Controller [AHCI mode]'
+        class      = mass storage
+
+  Category Total Score: 4/4
+
+--------------------
+
+- USB Ports
+    ehci0@pci0:4:0:4:	class=0x0c0320 rev=0x0e hdr=0x00 vendor=0x10ec device=0x816d subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL811x EHCI host controller'
+        class      = serial bus
+        subclass   = USB
+    xhci0@pci0:6:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e0 subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raven USB 3.1'
+        class      = serial bus
+        subclass   = USB
+    xhci1@pci0:6:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e1 subvendor=0x17aa subdevice=0x5122
+        vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+        device     = 'Raven USB 3.1'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+ext2fs.ko
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor:                  AuthenticAMD
+CPU family:              23
+Model:                   17
+Model name:              AMD Ryzen 5 PRO 2500U w/ Radeon Vega Mobile Gfx
+Stepping:                0
+L1d cache:               32K
+L1i cache:               64K
+L2 cache:                512K
+L3 cache:                4M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh mmx fxsr sse sse2 htt sse3 pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave osxsave avx f16c rdrnd syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm lahf_lm cmp_legacy svm extapic cr8_legacy lzcnt sse4a misalignsse 3dnowprefetch osvw skinit wdt tce topoext perfctr_core perfctr_nb pcx_l2i
+
+====================================
