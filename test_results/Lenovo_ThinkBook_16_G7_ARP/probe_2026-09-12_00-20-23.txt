@@ -1,0 +1,185 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 16.0-CURRENT main-n289005-fc33bbb02450 GENERIC
+Hardware: 21MW
+CPU: AMD Ryzen 5 7535HS with Radeon Graphics        
+------------------------------------
+
+- Graphics
+vgapci0@pci0:117:0:0:	class=0x030000 rev=0x0b hdr=0x00 vendor=0x1002 device=0x1681 subvendor=0x17aa subdevice=0x3821
+    vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+    device     = 'Rembrandt [Radeon 680M]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+re0@pci0:1:0:0:	class=0x020000 rev=0x15 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x17aa subdevice=0x3983
+    vendor     = 'Realtek Semiconductor Co., Ltd.'
+    device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+    class      = network
+    subclass   = ethernet
+rtw890@pci0:2:0:0:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x10ec device=0xc852 subvendor=0x17aa subdevice=0x5852
+    vendor     = 'Realtek Semiconductor Co., Ltd.'
+    device     = 'RTL8852CE PCIe 802.11ax Wireless Network Controller'
+    class      = network
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+hdac0@pci0:117:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0x17aa subdevice=0x383c
+    vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+    device     = 'Radeon High Definition Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+none2@pci0:117:0:5:	class=0x048000 rev=0x60 hdr=0x00 vendor=0x1022 device=0x15e2 subvendor=0x17aa subdevice=0x38a2
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Audio Coprocessor'
+    class      = multimedia
+hdac1@pci0:117:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x17aa subdevice=0x389b
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Ryzen HD Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+
+  Category Total Score: 1.3/2.0
+
+--------------------
+
+- Storage
+nvme0@pci0:4:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa80d subvendor=0x144d subdevice=0xa801
+    vendor     = 'Samsung Electronics Co Ltd'
+    device     = 'NVMe SSD Controller PM9C1a (DRAM-less)'
+    class      = mass storage
+    subclass   = NVM
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:117:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x161d subvendor=0x17aa subdevice=0x3806
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Rembrandt USB4 XHCI controller'
+    class      = serial bus
+    subclass   = USB
+xhci1@pci0:117:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x161e subvendor=0x17aa subdevice=0x3808
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Rembrandt USB4 XHCI controller'
+    class      = serial bus
+    subclass   = USB
+xhci2@pci0:118:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x161f subvendor=0x17aa subdevice=0x3041
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Rembrandt USB4 XHCI controller'
+    class      = serial bus
+    subclass   = USB
+xhci3@pci0:118:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15d6 subvendor=0x1022 subdevice=0x15d6
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Rembrandt USB4 XHCI controller'
+    class      = serial bus
+    subclass   = USB
+xhci4@pci0:118:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15d7 subvendor=0x1022 subdevice=0x15d7
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Rembrandt USB4 XHCI controller'
+    class      = serial bus
+    subclass   = USB
+none3@pci0:118:0:6:	class=0x0c0340 rev=0x00 hdr=0x00 vendor=0x1022 device=0x162f subvendor=0x1022 subdevice=0x162f
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Rembrandt USB4/Thunderbolt NHI controller'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 1.7/2.0
+
+--------------------
+
+- Bluetooth
+
+ugen1.2: <Bluetooth Radio Realtek Semiconductor Corp.> at usbus1, cfg=0 md=HOST spd=FULL (12Mbps) pwr=ON (500mA)
+  bDeviceClass = 0x00e0  <Wireless controller>
+  bDeviceSubClass = 0x0001 
+  iManufacturer = 0x0001  <Realtek>
+  iProduct = 0x0002  <Bluetooth Radio>
+  device = 'Bluetooth Radio Realtek Semiconductor Corp.'
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+amdgpio.ko
+amdgpu.ko
+amdgpu_yellow_carp_ce_bin.ko
+amdgpu_yellow_carp_dmcub_bin.ko
+amdgpu_yellow_carp_me_bin.ko
+amdgpu_yellow_carp_mec2_bin.ko
+amdgpu_yellow_carp_mec_bin.ko
+amdgpu_yellow_carp_pfp_bin.ko
+amdgpu_yellow_carp_rlc_bin.ko
+amdgpu_yellow_carp_sdma_bin.ko
+amdgpu_yellow_carp_ta_bin.ko
+amdgpu_yellow_carp_toc_bin.ko
+amdgpu_yellow_carp_vcn_bin.ko
+amdpm.ko
+amdsmb.ko
+amdsmn.ko
+amdsmu.ko
+amdtemp.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fusefs.ko
+gpiobus.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_rtw89.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+kernel
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nlsysevent.ko
+smbus.ko
+snd_als4000.ko
+snd_atiixp.ko
+snd_cs4281.ko
+snd_driver.ko
+snd_envy24.ko
+snd_envy24ht.ko
+snd_fm801.ko
+snd_hdsp.ko
+snd_hdspe.ko
+snd_maestro3.ko
+snd_neomagic.ko
+snd_solo.ko
+snd_spicds.ko
+snd_t4dwave.ko
+snd_uaudio.ko
+snd_via82c686.ko
+snd_vibes.ko
+ttm.ko
+uvideo.ko
+video.ko
+
+====================================
