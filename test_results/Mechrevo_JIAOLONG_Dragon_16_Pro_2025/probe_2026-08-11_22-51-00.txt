@@ -1,0 +1,161 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-RELEASE GENERIC
+Hardware: JIAOLONG_Series
+CPU: AMD Ryzen 9 8940HX with Radeon Graphics        
+------------------------------------
+
+- Graphics
+vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x2d19 subvendor=0x1d05 subdevice=0x605c
+    vendor     = 'NVIDIA Corporation'
+    device     = 'GB206M [GeForce RTX 5060 Max-Q / Mobile]'
+    class      = display
+    subclass   = VGA
+vgapci1@pci0:5:0:0:	class=0x030000 rev=0xd8 hdr=0x00 vendor=0x1002 device=0x164e subvendor=0x1d05 subdevice=0x5005
+    vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+    device     = 'Raphael'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 1.5/2.0
+
+--------------------
+
+- Networking
+mt79210@pci0:2:0:0:	class=0x028000 rev=0x00 hdr=0x00 vendor=0x14c3 device=0x7922 subvendor=0x1a3b subdevice=0x5911
+    vendor     = 'MEDIATEK Corp.'
+    device     = 'MT7922 802.11ax PCI Express Wireless Network Adapter'
+    class      = network
+none1@pci0:4:0:0:	class=0x020000 rev=0x05 hdr=0x00 vendor=0x10ec device=0x8125 subvendor=0x1d05 subdevice=0x7013
+    vendor     = 'Realtek Semiconductor Co., Ltd.'
+    device     = 'RTL8125 2.5GbE Controller'
+    class      = network
+    subclass   = ethernet
+
+  Category Total Score: 0.5/2.0
+
+--------------------
+
+- Audio
+hdac0@pci0:1:0:1:	class=0x040300 rev=0xa1 hdr=0x00 vendor=0x10de device=0x22eb subvendor=0x10de subdevice=0x0000
+    vendor     = 'NVIDIA Corporation'
+    device     = 'GB206 High Definition Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+hdac1@pci0:5:0:1:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1002 device=0x1640 subvendor=0x1d05 subdevice=0x5005
+    vendor     = 'Advanced Micro Devices, Inc. [AMD/ATI]'
+    device     = 'Radeon High Definition Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+none3@pci0:5:0:5:	class=0x048000 rev=0x62 hdr=0x00 vendor=0x1022 device=0x15e2 subvendor=0x1d05 subdevice=0x5005
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Audio Coprocessor'
+    class      = multimedia
+hdac2@pci0:5:0:6:	class=0x040300 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15e3 subvendor=0x1d05 subdevice=0x3010
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Ryzen HD Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+
+  Category Total Score: 1.5/2.0
+
+--------------------
+
+- Storage
+nvme0@pci0:3:0:0:	class=0x010802 rev=0x03 hdr=0x00 vendor=0x1e49 device=0x1081 subvendor=0x1e49 subdevice=0x1081
+    vendor     = 'Yangtze Memory Technologies Co.,Ltd'
+    device     = 'PC41Q M.2 2280 NVMe SSD (DRAM-less)'
+    class      = mass storage
+    subclass   = NVM
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:5:0:3:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b6 subvendor=0x1d05 subdevice=0x5005
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Raphael/Granite Ridge USB 3.1 xHCI'
+    class      = serial bus
+    subclass   = USB
+xhci1@pci0:5:0:4:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b7 subvendor=0x1d05 subdevice=0x5005
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Raphael/Granite Ridge USB 3.1 xHCI'
+    class      = serial bus
+    subclass   = USB
+xhci2@pci0:6:0:0:	class=0x0c0330 rev=0x00 hdr=0x00 vendor=0x1022 device=0x15b8 subvendor=0x1d05 subdevice=0x5005
+    vendor     = 'Advanced Micro Devices, Inc. [AMD]'
+    device     = 'Raphael/Granite Ridge USB 2.0 xHCI'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Bluetooth
+
+
+
+  Category Total Score: 0.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_video.ko
+acpi_wmi.ko
+amdgpu.ko
+amdgpu_dcn_3_1_5_dmcub_bin.ko
+amdgpu_gc_10_3_6_ce_bin.ko
+amdgpu_gc_10_3_6_me_bin.ko
+amdgpu_gc_10_3_6_mec2_bin.ko
+amdgpu_gc_10_3_6_mec_bin.ko
+amdgpu_gc_10_3_6_pfp_bin.ko
+amdgpu_gc_10_3_6_rlc_bin.ko
+amdgpu_psp_13_0_5_ta_bin.ko
+amdgpu_psp_13_0_5_toc_bin.ko
+amdgpu_sdma_5_2_6_bin.ko
+amdgpu_vcn_3_1_2_bin.ko
+dmabuf.ko
+drm.ko
+fdescfs.ko
+fusefs.ko
+hconf.ko
+hidmap.ko
+hms.ko
+hmt.ko
+if_mt7921.ko
+if_urndis.ko
+ig4.ko
+iic.ko
+iichid.ko
+intpm.ko
+kernel
+lindebugfs.ko
+linprocfs.ko
+linsysfs.ko
+linux.ko
+linux64.ko
+linux_common.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+mqueuefs.ko
+mt76_core.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_btsocket.ko
+ng_hci.ko
+ng_l2cap.ko
+ng_socket.ko
+ng_ubt.ko
+nlsysevent.ko
+nvidia-modeset.ko
+nvidia.ko
+pty.ko
+smbus.ko
+ttm.ko
+uether.ko
+
+====================================
