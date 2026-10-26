@@ -1,0 +1,111 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-RELEASE-p6 releng/15.1-n283643-95719d8a895b GENERIC
+Hardware: 20HQS08X1J
+CPU: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz
+------------------------------------
+
+- Graphics
+vgapci0@pci0:0:2:0:	class=0x030000 rev=0x02 hdr=0x00 vendor=0x8086 device=0x5916 subvendor=0x17aa subdevice=0x224f
+    vendor     = 'Intel Corporation'
+    device     = 'Kaby Lake-U GT2 [HD Graphics 620]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+em0@pci0:0:31:6:	class=0x020000 rev=0x21 hdr=0x00 vendor=0x8086 device=0x15d7 subvendor=0x17aa subdevice=0x224f
+    vendor     = 'Intel Corporation'
+    device     = 'Ethernet Connection (4) I219-LM'
+    class      = network
+    subclass   = ethernet
+iwlwifi0@pci0:4:0:0:	class=0x028000 rev=0x88 hdr=0x00 vendor=0x8086 device=0x24fd subvendor=0x8086 subdevice=0x0130
+    vendor     = 'Intel Corporation'
+    device     = 'Wireless 8265 / 8275'
+    class      = network
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+hdac0@pci0:0:31:3:	class=0x040300 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d71 subvendor=0x17aa subdevice=0x224f
+    vendor     = 'Intel Corporation'
+    device     = 'Sunrise Point-LP HD Audio'
+    class      = multimedia
+    subclass   = HDA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Storage
+ahci0@pci0:0:23:0:	class=0x010601 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d03 subvendor=0x17aa subdevice=0x224f
+    vendor     = 'Intel Corporation'
+    device     = 'Sunrise Point-LP SATA Controller [AHCI mode]'
+    class      = mass storage
+    subclass   = SATA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x21 hdr=0x00 vendor=0x8086 device=0x9d2f subvendor=0x17aa subdevice=0x224f
+    vendor     = 'Intel Corporation'
+    device     = 'Sunrise Point-LP USB 3.0 xHCI Controller'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Bluetooth
+
+ugen0.2: <Bluetooth wireless interface Intel Corp.> at usbus0, cfg=0 md=HOST spd=FULL (12Mbps) pwr=ON (100mA)
+  bDeviceClass = 0x00e0  <Wireless controller>
+  bDeviceSubClass = 0x0001 
+  iManufacturer = 0x0000  <no string>
+  iProduct = 0x0000  <no string>
+  device = 'Bluetooth wireless interface Intel Corp.'
+
+  Category Total Score: 0.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+autofs.ko
+cuse.ko
+dmabuf.ko
+drm.ko
+fusefs.ko
+hidmap.ko
+hms.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+iic.ko
+kernel
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+pchtherm.ko
+rtsx.ko
+smbus.ko
+ttm.ko
+zfs.ko
+
+====================================
