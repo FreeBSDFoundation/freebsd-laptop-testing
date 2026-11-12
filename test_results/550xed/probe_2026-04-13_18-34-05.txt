@@ -1,0 +1,102 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 14.2-RELEASE releng/14.2-n269506-c8918d6c7412 GENERIC
+Hardware: 550XED
+------------------------------------
+
+- Graphics
+  Device 1 Status: DETECTED
+    vgapci0@pci0:0:2:0:	class=0x030000 rev=0x0c hdr=0x00 vendor=0x8086 device=0x46b3 subvendor=0x144d subdevice=0xc878
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-UP3 GT1 [UHD Graphics]'
+        class      = display
+        subclass   = VGA
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Networking
+  Device 1 Status: WORKS
+    none3@pci0:0:20:3:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51f0 subvendor=0x8086 subdevice=0x0034
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-P PCH CNVi WiFi'
+        class      = network
+  Device 2 Status: FAILED
+    re0@pci0:2:0:0:	class=0x020000 rev=0x15 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x144d subdevice=0xc878
+        vendor     = 'Realtek Semiconductor Co., Ltd.'
+        device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+        class      = network
+
+  Category Total Score: 1/2
+
+--------------------
+
+- Audio
+    hdac0@pci0:0:31:3:	class=0x040100 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51c8 subvendor=0x144d subdevice=0xc878
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake PCH-P High Definition Audio Controller'
+        class      = multimedia
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Storage
+  Device 1 Status: DETECTED
+    ahci0@pci0:0:23:0:	class=0x010601 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51d3 subvendor=0x144d subdevice=0xc878
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake-P SATA AHCI Controller'
+        class      = mass storage
+  Device 2 Status: WORKS
+    nvme0@pci0:1:0:0:	class=0x010802 rev=0x00 hdr=0x00 vendor=0x144d device=0xa809 subvendor=0x144d subdevice=0xa801
+        vendor     = 'Samsung Electronics Co Ltd'
+        device     = 'NVMe SSD Controller 980 (DRAM-less)'
+        class      = mass storage
+
+  Category Total Score: 2/2
+
+--------------------
+
+- USB Ports
+    xhci0@pci0:0:20:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ed subvendor=0x144d subdevice=0xc878
+        vendor     = 'Intel Corporation'
+        device     = 'Alder Lake PCH USB 3.2 xHCI Host Controller'
+        class      = serial bus
+        subclass   = USB
+
+  Category Total Score: 2/2
+
+--------------------
+
+- Bluetooth
+  Status: NOT DETECTED
+  Category Total Score: 0/2
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+
+====================================
+
+- CPU Info
+Architecture:            amd64
+Byte Order:              Little Endian
+Total CPU(s):            8
+Thread(s) per core:      1
+Core(s) per socket:      8
+Socket(s):               1
+Vendor:                  GenuineIntel
+CPU family:              6
+Model:                   154
+Model name:              12th Gen Intel(R) Core(TM) i3-1215U
+Stepping:                4
+L1d cache:               32K
+L1i cache:               64K
+L2 cache:                2048K
+L3 cache:                10M
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 cflsh ds acpi mmx fxsr sse sse2 ss htt tm pbe sse3 pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline aes xsave osxsave avx f16c rdrnd fsgsbase tsc_adjust bmi1 avx2 fp_dp smep bmi2 erms invpcid fpcsds rdseed adx smap clflushopt clwb intel_pt umip pku ospke syscall nx pdpe1gb rdtscp lm lahf_lm lzcnt
+
+====================================
