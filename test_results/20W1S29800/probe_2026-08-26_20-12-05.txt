@@ -1,0 +1,121 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-RELEASE-p2 stopgap-15.1-n283597-91c073bf54ad GENERIC
+Hardware: 20W1S29800
+CPU: 11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz
+------------------------------------
+
+- Graphics
+vgapci0@pci0:0:2:0:	class=0x030000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a49 subvendor=0x17aa subdevice=0x22c9
+    vendor     = 'Intel Corporation'
+    device     = 'TigerLake-LP GT2 [Iris Xe Graphics]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+iwlwifi0@pci0:0:20:3:	class=0x028000 rev=0x20 hdr=0x00 vendor=0x8086 device=0xa0f0 subvendor=0x8086 subdevice=0x0070
+    vendor     = 'Intel Corporation'
+    device     = 'Wi-Fi 6 AX201'
+    class      = network
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+hdac0@pci0:0:31:3:	class=0x040380 rev=0x20 hdr=0x00 vendor=0x8086 device=0xa0c8 subvendor=0x17aa subdevice=0x22c9
+    vendor     = 'Intel Corporation'
+    device     = 'Tiger Lake-LP Smart Sound Technology Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Storage
+nvme0@pci0:4:0:0:	class=0x010802 rev=0x03 hdr=0x00 vendor=0x8086 device=0xf1a6 subvendor=0x8086 subdevice=0x390b
+    vendor     = 'Intel Corporation'
+    device     = 'SSD DC P4101/Pro 7600p/760p/E 6100p Series'
+    class      = mass storage
+    subclass   = NVM
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:0:13:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a13 subvendor=0x17aa subdevice=0x22c9
+    vendor     = 'Intel Corporation'
+    device     = 'Tiger Lake-LP Thunderbolt 4 USB Controller'
+    class      = serial bus
+    subclass   = USB
+none1@pci0:0:13:2:	class=0x0c0340 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a1b subvendor=0x17aa subdevice=0x22c9
+    vendor     = 'Intel Corporation'
+    device     = 'Tiger Lake-LP Thunderbolt 4 NHI'
+    class      = serial bus
+    subclass   = USB
+none2@pci0:0:13:3:	class=0x0c0340 rev=0x01 hdr=0x00 vendor=0x8086 device=0x9a1d subvendor=0x17aa subdevice=0x22c9
+    vendor     = 'Intel Corporation'
+    device     = 'Tiger Lake-LP Thunderbolt 4 NHI'
+    class      = serial bus
+    subclass   = USB
+xhci1@pci0:0:20:0:	class=0x0c0330 rev=0x20 hdr=0x00 vendor=0x8086 device=0xa0ed subvendor=0x17aa subdevice=0x22c9
+    vendor     = 'Intel Corporation'
+    device     = 'Tiger Lake-LP USB 3.2 Gen 2x1 xHCI Host Controller'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 1.0/2.0
+
+--------------------
+
+- Bluetooth
+
+ugen1.4: <AX201 Bluetooth Intel Corp.> at usbus1, cfg=0 md=HOST spd=FULL (12Mbps) pwr=ON (100mA)
+  bDeviceClass = 0x00e0  <Wireless controller>
+  bDeviceSubClass = 0x0001 
+  iManufacturer = 0x0000  <no string>
+  iProduct = 0x0000  <no string>
+  device = 'AX201 Bluetooth Intel Corp.'
+
+  Category Total Score: 0.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_ibm.ko
+acpi_wmi.ko
+cryptodev.ko
+dmabuf.ko
+drm.ko
+hconf.ko
+hmt.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+kernel
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+nullfs.ko
+smbus.ko
+ttm.ko
+zfs.ko
+
+====================================
