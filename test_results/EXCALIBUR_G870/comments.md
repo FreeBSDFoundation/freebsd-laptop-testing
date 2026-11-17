@@ -35,3 +35,9 @@ After installation, both frequency bands worked. Package
 download speeds with pkg varied between approximately
 0.9 and 4 MB/s on both bands. These are package download
 observations, not controlled throughput measurements.
+
+## Additional user experience observations
+
+- Mobile phone tethering worked successfully.
+- Multi-finger touchpad gestures worked correctly under KDE Plasma Wayland.
+- Volume up and down keyboard shortcuts worked correctly under Wayland.
