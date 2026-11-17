@@ -1,0 +1,126 @@
+=== FreeBSD Hardware Status Info ===
+
+Running: FreeBSD 15.1-RELEASE releng/15.1-n283562-96841ea08dcf GENERIC
+Hardware: EXCALIBUR_G870
+CPU: 12th Gen Intel(R) Core(TM) i7-12650H
+------------------------------------
+
+- Graphics
+vgapci1@pci0:0:2:0:	class=0x030000 rev=0x0c hdr=0x00 vendor=0x8086 device=0x46a3 subvendor=0x152d subdevice=0x1513
+    vendor     = 'Intel Corporation'
+    device     = 'Alder Lake-P GT1 [UHD Graphics]'
+    class      = display
+    subclass   = VGA
+vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x28a0 subvendor=0x152d subdevice=0x1521
+    vendor     = 'NVIDIA Corporation'
+    device     = 'AD107M [GeForce RTX 4060 Max-Q / Mobile]'
+    class      = display
+    subclass   = VGA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Networking
+iwlwifi0@pci0:0:20:3:	class=0x028000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51f0 subvendor=0x8086 subdevice=0x0074
+    vendor     = 'Intel Corporation'
+    device     = 'Alder Lake-P PCH CNVi WiFi'
+    class      = network
+re0@pci0:4:0:0:	class=0x020000 rev=0x15 hdr=0x00 vendor=0x10ec device=0x8168 subvendor=0x152d subdevice=0x1513
+    vendor     = 'Realtek Semiconductor Co., Ltd.'
+    device     = 'RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller'
+    class      = network
+    subclass   = ethernet
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Audio
+hdac1@pci0:0:31:3:	class=0x040100 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51c8 subvendor=0x152d subdevice=0x1515
+    vendor     = 'Intel Corporation'
+    device     = 'Alder Lake PCH-P High Definition Audio Controller'
+    class      = multimedia
+    subclass   = audio
+hdac0@pci0:1:0:1:	class=0x040300 rev=0xa1 hdr=0x00 vendor=0x10de device=0x22be subvendor=0x152d subdevice=0x1521
+    vendor     = 'NVIDIA Corporation'
+    device     = 'AD107 High Definition Audio Controller'
+    class      = multimedia
+    subclass   = HDA
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Storage
+nvme0@pci0:2:0:0:	class=0x010802 rev=0x01 hdr=0x00 vendor=0x1e0f device=0x002a subvendor=0x1e0f subdevice=0x00fb
+    vendor     = 'KIOXIA Corporation'
+    device     = 'Exceria Plus G3 NVMe SSD (DRAM-less)'
+    class      = mass storage
+    subclass   = NVM
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- USB Ports
+xhci0@pci0:0:13:0:	class=0x0c0330 rev=0x02 hdr=0x00 vendor=0x8086 device=0x461e subvendor=0x0000 subdevice=0x0000
+    vendor     = 'Intel Corporation'
+    device     = 'Alder Lake-P Thunderbolt 4 USB Controller'
+    class      = serial bus
+    subclass   = USB
+xhci1@pci0:0:20:0:	class=0x0c0330 rev=0x01 hdr=0x00 vendor=0x8086 device=0x51ed subvendor=0x152d subdevice=0x1513
+    vendor     = 'Intel Corporation'
+    device     = 'Alder Lake PCH USB 3.2 xHCI Host Controller'
+    class      = serial bus
+    subclass   = USB
+
+  Category Total Score: 2.0/2.0
+
+--------------------
+
+- Bluetooth
+
+ugen1.4: <AX201 Bluetooth Intel Corp.> at usbus1, cfg=0 md=HOST spd=FULL (12Mbps) pwr=ON (100mA)
+  bDeviceClass = 0x00e0  <Wireless controller>
+  bDeviceSubClass = 0x0001 
+  iManufacturer = 0x0000  <no string>
+  iProduct = 0x0000  <no string>
+  device = 'AX201 Bluetooth Intel Corp.'
+
+  Category Total Score: 0.0/2.0
+
+--------------------
+
+=== FreeBSD Detailed Status Info ==
+
+Currently loaded kernel modules:
+acpi_wmi.ko
+dmabuf.ko
+drm.ko
+hconf.ko
+hcons.ko
+hidmap.ko
+hms.ko
+hmt.ko
+hsctrl.ko
+i915kms.ko
+ichsmb.ko
+if_iwlwifi.ko
+if_iwx.ko
+ig4.ko
+iic.ko
+iichid.ko
+kernel
+lindebugfs.ko
+linuxkpi_video.ko
+mac_ntpd.ko
+netgraph.ko
+ng_bluetooth.ko
+ng_hci.ko
+ng_ubt.ko
+nlsysevent.ko
+smbus.ko
+ttm.ko
+
+====================================
