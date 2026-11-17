@@ -41,3 +41,4 @@ observations, not controlled throughput measurements.
 - Mobile phone tethering worked successfully.
 - Multi-finger touchpad gestures worked correctly under KDE Plasma Wayland.
 - Volume up and down keyboard shortcuts worked correctly under Wayland.
+- The laptop automatically reconnected to the configured Wi-Fi network after reboot without requiring manual reconnection.
